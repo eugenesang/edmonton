@@ -1,0 +1,19 @@
+{
+  "name": "edmontonrealestateexperts",
+  "version": "1.0.0",
+  "description": "Edmonton Real Estate Experts",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eugene Sang",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
