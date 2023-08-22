@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('head') %>
+<body>
+    <%- include('nav') %>
+    <header id="header">
+        <div class="container">
+            <h1><i class="fas fa-user"></i> <%= full_name %></h1>
+            <h3><span class="fas fa-envelope"></span> <%= email %></h3>
+            <h3><span class="fas fa-phone"></span> <%= phone_number %></h3>
+        </div>
+    </header>
+    <form action="/account/edit" method="POST">
+        <fieldset>
+          <legend>
+            Edit info
+          </legend>
+          <div class="form-container">
+            
+            <div class="input-container">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required value="<%= full_name.split(' ')[0] %>">
+            </div>
+            <div class="input-container">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required value="<%= full_name.split(' ')[1] %>">
+            </div>
+            <div class="input-container">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required value="<%= email %>">
+            </div>
+            <div class="input-container">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" value="<%= phone_number %>">
+            </div>
+            <div class="submit-container">
+              <button type="submit" disabled>Change</button>
+            </div>
+          </div>
+        </fieldset>
+        
+      </form>
+    </div>
+   
+    <style>
+      @charset "utf-8";
+  
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;800&family=DM+Serif+Display&display=swap');
+      @import url("https://use.typekit.net/psb8eyo.css");
+  
+      :root{
+          --orange: rgb(255, 182, 0);
+          --text-color: #ffa600;
+          --dm: "DM Serif Display";
+      }
+      
+      *{
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          font-family: "adobe-garamond-pro", serif;
+          font-weight: 400;
+          transition: ease 400ms;
+      }
+      ::-webkit-scrollbar{
+          width:5px;
+      }
+      ::-webkit-scrollbar-thumb{
+          background-color: rgb(4, 195, 195);
+          border-radius: 5px;
+      }
+      .container{
+        width: fit-content;
+        margin: 10px auto;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgba(100, 100, 100, 0.505);
+        backdrop-filter: blur(5px);
+        box-shadow: 1px 1px 5px 3px gray;
+      }
+      #header{
+        background-image: url(/images/dashboard-header-bg.jpg);
+      }
+      header *{
+        text-align: center;
+      }
+      form{
+        background-color: whitesmoke;
+        padding: 15px;
+        border-radius: 10px;
+        width: fit-content;
+        margin: 10px auto;
+      }
+      fieldset{
+        padding: .5rem 1rem;
+        border: 1px solid teal;
+        border-radius: 5px;
+      }
+      legend{
+          font-family: var(--dm);
+          padding: 0 .5rem;
+      }
+  
+      
+  
+      .input-container{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin: 10px 0;
+        padding: 5px 10px;
+        max-width: 60vw;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid white;
+        background-color: rgb(240, 240, 240);
+      }
+  
+      input{
+        outline: none;
+        border: 1px solid teal;
+        border-radius: 2.5px;
+        padding: 2.5px;
+      }
+      button{
+        display: block;
+        padding: 5px 10px;
+        margin: 10px auto;
+        background-color: teal;
+        font-weight: bold;
+        border-radius: 5px;
+        color: white;
+        border: 1px solid teal;
+        cursor: pointer;
+      }
+      button:hover{
+        background-color: transparent;
+        color: teal;
+      }
+      button:disabled{
+        color: darkgrey;
+        background-color: lightgray;
+        border-color: lightgray;
+        cursor: not-allowed;
+      }
+    </style>
+    <%- include('estimates') %>
+    <%- include('footer') %>
+</body>
+</html>

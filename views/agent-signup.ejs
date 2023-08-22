@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Signup</title>
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <%- include('nav') %>
+        <header>
+            <div class="header-text">
+                <h2>
+                    Edmonton Real Estate Experts Certified
+                </h2>
+                <ul>
+                    <li>Opportunities for Realtors</li>
+                    <li>Advantages for your clients</li>
+                    <li>Offer your clients more/better options to sell without showings.</li>
+                </ul>
+                <button>Get Certified</button>
+            </div>
+            <div class="header-img">
+                <img src="/images/female-realtor-handing-couple-keys-their-new-home.jpg" alt="">
+            </div>
+        </header>
+        <section id="advantages">
+            <div class="advantage-clients">
+                <div class="advantage-image">
+                    <img src="/images/excited-couple-raising-hands-happy-move-new-house.jpg" alt="">
+                </div>
+                <div class="advantage-description">
+                    <h5>Advantages for Clients</h5>
+                    <div class="ul">
+                        <li>Skip Showings</li>
+                        <li>Avoid Double Mortgage payments</li>
+                        <li>Avoid Double Moves</li>
+                        <li>Buy Their Next Home Confidently</li>
+                    </div>
+                </div>
+            </div>
+            <div class="advantage-realtors">
+                <div class="advantage-image">
+                    <img src="/images/pexels-kindel-media-7578905.jpg" alt="">
+                </div>
+                <div class="advantage-description">
+                    <h5>Advantages for REALTORS</h5>
+                    <div class="ul">
+                        <li>More Firm Deals/Closings</li>
+                        <li>Offers For Clients On Request</li>
+                        <li>No Additional Fees</li>
+                        <li>Keep Your Listing Active</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="registration">
+            <div class="reg-header">
+                <div class="img-container">
+                    <img src="/images/edmonton-certified.svg" alt="">
+                </div>
+                <div class="req-details">
+                    <p>Register to become a certified agent for Edmonton Real Estate Experts in your area and offer more
+                        options for your clients</p>
+                </div>
+            </div>
+            <div class="reg-body">
+                <form action="/agent/signup">
+                    <div class="text-based-inputs">
+                        <div class="input-container">
+                            <label for="firstName">First name</label>
+                            <input type="text" name="firstName " id="firstName">
+                        </div>
+                        <div class="input-container">
+                            <label for="lastName ">Last Name </label>
+                            <input type="text" name="lastName " id="lastName">
+                        </div>
+                        <div class="input-container">
+                            <label for="email">Email </label>
+                            <input type="email" name="email " id="email">
+                        </div>
+                        <div class="input-container">
+                            <label for="phoneNumber">Phone Number </label>
+                            <input type="tel" name="phoneNumber" id="phoneNumber">
+                        </div>
+                        <div class="input-container">
+                            <label for="website">Website</label>
+                            <input type="url" name="website" id="website">
+                        </div>
+                        <div class="input-container">
+                            <label for="town">City/Area</label>
+                            <input type="text" name="town" id="town">
+                        </div>
+                        <div class="input-container">
+                            <label for="province">Province</label>
+                            <input type="text" name="province" id="province">
+                        </div>
+                        <div class="input-container">
+                            <label for="existingBrokerage">Existing Brokerage</label>
+                            <input type="text" name="existingBrokerage" id="existingBrokerage">
+                        </div>
+                    </div>
+                    <div class="selections">
+                        <div class="selection-container">
+                            <p><label for="accountType">I am a(n)</label></p>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="accountType" value="broker">
+                                    Broker
+                                </label>
+                                <label>
+                                    <input type="radio" name="accountType" value="associate">
+                                    Associate
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selection-container">
+                            <p><label for="interest">Are you interested in local franchise opportunities when they
+                                    become available?</label></p>
+                            <input type="checkbox" name="interest" id="interest">
+                        </div>
+                    </div>
+                    <div class="more-info">
+                        <div class="more-info-container">
+                            <p><label for="moreInfo">Is there anything you'd like us to know about you?</label></p>
+                            <textarea name="moreInfo" id="moreInfo" cols="30" rows="10"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="submit-container">
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <%- include('footer') %>
+</body>
+
+</html>

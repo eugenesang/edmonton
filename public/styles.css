@@ -14,7 +14,6 @@
     padding: 0;
     margin: 0;
     font-family: "adobe-garamond-pro", serif;
-    font-weight: 400;
     transition: ease 400ms;
 }
 ::-webkit-scrollbar{
@@ -50,7 +49,6 @@ a{
 }
 a:hover{
     color: var(--orange);
-    text-decoration: underline;
 }
 a:visited{
     color: gold;
@@ -64,97 +62,13 @@ button{
     border: 1px solid var(--orange);
     color: white;
     margin: 7px auto;
+    font-size: medium;
 }
 
 button:hover{
     background-color: white;
     color: var(--orange);
     transition: 400ms ease;
-}
-nav{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1rem;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    width: 100vw;
-    background-color: white;
-    z-index: 100;
-}
-.company-brand{
-    padding: .5rem;
-}
-
-.company-brand img {
-    width: 100%; /* Allow the image to take up the full width of its container */
-    aspect-ratio: 1532 / 327; /* Set the aspect ratio of the image */
-    max-width: 100%; /* Ensure the image doesn't exceed its container */
-    height: 2.5rem;
-}
-
-.nav-right{
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-}
-
-.nav-right button{
-    margin-right: 5px;
-}
-
-.mb-expand{
-    text-align: right;
-    padding: .5rem 1.5rem;
-}
-.mb-expand i{
-    font-size: 2rem;
-}
-
-.options-dropdown{
-    position: fixed;
-    height: calc(100vh - 50px);
-    width: 100vw;
-    left: 0;
-    top: 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.nest-li-ul ul{
-    margin: 0px 10px;
-    padding: 5px  10px;
-    border-left: 2px solid var(--orange);
-    list-style-type: circle;
-}
-
-.options-right{
-    display: grid;
-    grid-template-rows: auto 1fr;
-}
-
-.options-right li{
-    padding: 5px 0px;
-    font-size: 1.2rem;
-}
-
-.acc-nav{
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: .5rem;
-    max-width: 200px;
-}
-.acc-nav button{
-    margin: 5px;
-}
-
-.options-top{
-    background-color: white;
-    padding: 15px 10px;
-    box-shadow: -5px 5px 10px 2px gray;
-}
-.options-left, .options-bottom{
-    background-color: transparent;
 }
 
 #header{
@@ -168,9 +82,10 @@ nav{
 
 .header-container{
     width: 100%;
+    height: 100%;
     display: grid;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     overflow: hidden;
     z-index: 5;
 }
@@ -651,103 +566,4 @@ nav{
 
 .faq-btn:hover{
     border-color: var(--orange);
-}
-
-#estimates{
-    background-color: whitesmoke;
-    padding: 1rem;
-}
-
-#estimates > div{
-    border-top: 2px solid white;
-    padding: 1rem .25rem;
-}
-
-.towns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    max-width: 90vw;
-    margin: 10px auto;
-}
-
-.towns a {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    background-color: #dcdcdc;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #000000;
-    max-width: 200px;
-}
-
-.towns a:hover{
-    background-color: teal;
-    color: white;
-}
-footer{
-    padding: 1rem;
-}
-.company-logo {
-    padding: 1rem 0;
-}
-.company-logo img{
-    width: 350px;
-    max-width: 80vw;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.footer-container > div {
-    flex: 1;
-    min-width: fit-content; /* Adjust the width as needed */
-    margin: 10px;
-    background-color: #afafaf28;
-    padding: 10px;
-}
-
-.footer-container h3 {
-    margin-bottom: 10px;
-}
-
-.footer-container ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-container li {
-    margin-bottom: 5px;
-}
-
-.footer-container  li a *{
-    color: var(--text-color);
-}
-.footer-container a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.footer-container a:hover {
-    color: #ff5733;
-}
-
-.footer-container .fa-brands {
-    margin-right: 5px;
-}
-
-.tnc{
-    text-align: center;
-    padding: 1rem;
-    background-color: teal;
-}
-
-.tnc small{
-    color: white;
-    padding-top: 1rem;
 }

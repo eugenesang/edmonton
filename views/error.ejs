@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('head') %>
+<body>
+    <%- include('nav') %>
+    <div class="content">
+        <div class="c-container">
+            <div class="status">
+                <h1><%= status %></h1>
+                <h2>Error</h2>
+            </div>
+            <div class="message">
+                <%= message %>
+            </div>
+        </div>
+        
+    </div>
+    <style>
+        .content{
+            height: 100vh;
+            width: 100vw;
+            background: url(/images/misty-forest-view.jpg);
+            background-size: cover;
+            display: grid;
+            align-items: center;
+        }
+        .c-container{
+            height: fit-content;
+            background: rgba(0, 145, 255, 0.2);
+            backdrop-filter: blur(5px);
+            width: fit-content;
+            margin: 10px auto;
+            min-width: 40vw;
+            max-width: 70vw;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .status{
+            width: fit-content;
+            margin: 10px auto;
+        }
+        .status *{
+            text-align: center;
+        }
+        .status h1{ 
+            font-size: 4rem;
+            color: rgb(72, 0, 255);
+            -webkit-text-stroke: 1px;
+            -webkit-text-stroke-color: red;
+        }
+        .message{
+            color: #ff0059;
+            font-weight: bold;
+            border-radius: .5rem;
+            padding: 10px;
+            width: fit-content;
+            margin: 10px auto;
+        }
+    </style>
+</body>
+</html>

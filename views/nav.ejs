@@ -1,0 +1,270 @@
+<div>
+    
+<nav id="navbar">
+    <div class="company-brand" onclick="location.href='/'">
+        <img src="/images/edmonton full logo.svg" alt="Edmonton Real Estate Experts full logo">
+    </div>
+    <div class="nav-right">
+        <div >
+            <button class="phone-link"><a href="tel:+18778504448">
+                <i class="fa-solid fa-phone"></i> <span>1-877-850-4448</span>
+            </a></button>
+            
+        </div>
+        <div>
+            <div class="mb mb-expand">
+                <span class="mb-hidden">More </span>
+                <i class="fa-solid fa-xmark hidden"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="mb-hidden options-dropdown">
+                <div class="options-left"></div>
+                <ul class="options-right">
+
+                    <div class="options-top">
+                        <li class="nest-li">
+                            <ul class="nest-li-ul">
+                                <li>Buy & Sell <i class="fa-solid fa-chevron-right"></i></li>
+                                <ul class="hidden">
+                                    <li> <a href="/swift-sale">Swift Sale</a></li>
+                                    <li><a href="/local-mls">Listing on the Local MLS</a></li>
+                                    <li>Cooperating agents</li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li class="nest-li">
+                            <ul class="nest-li-ul">
+                                <li>Browser homes <i class="fa-solid fa-chevron-right"></i></li>
+                                <li>
+                                    <ul class="hidden">
+                                        <li>List & Map</li>
+                                        <li>Show List</li>
+                                        <li>Show Map</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>What is my worth</li>
+                        <li class="nest-li">
+                            <ul class="nest-li-ul">
+                                <li>Info <i class="fa-solid fa-chevron-right"></i></li>
+                                <li>
+                                    <ul class="hidden">
+                                        <li>Blog</li>
+                                        <li>Access Sold Data</li>
+                                        <li>We Buy Houses</li>
+                                        <li>Sell My Houses</li>
+                                        <li>A better guarantee</li>
+                                        <li>Edmonton Listings</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>About us</li>
+                        <li>Our agents</li>
+                        <li>Contact</li>
+                        <% if(user) {%>
+                            <li class="acc-nav">
+                                <button class="login" onclick="location.href='/account/'"> <i class="fa-solid fa-user"></i> <%= user.full_name.split(' ')[0] %></button>
+                                <button class="signup" onclick="location.href='/account/logout'">Logout</button>
+                            </li>
+                        <% }else{ %>
+                            <li class="acc-nav">
+                                <button class="login" onclick="location.href='/account/login'">Log In</button>
+                                <button class="signup" onclick="location.href='/account/signup'">Sign Up</button>
+                            </li>
+                        <% } %>
+                        <li>
+                            <button class="estimates-btn">See My Estimates</button>
+                        </li>
+                    </div>
+                    <div class="options-bottom">
+                        
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    
+</nav>
+<style>
+    .mb-hidden{
+        display: none;
+    }
+    nav{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1rem;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 100vw;
+        background-color: white;
+        z-index: 100;
+    }
+    .company-brand{
+        padding: .5rem;
+    }
+    
+    .company-brand img {
+        aspect-ratio: 1532 / 327; 
+        height: 2.5rem;
+        max-width: 35vw;
+    }
+    
+    .nav-right{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+    }
+    
+    .nav-right button{
+        margin-right: 5px;
+    }
+    
+    .phone-link{
+        background-color: transparent;
+        border: 2px solid teal;
+    }
+    .phone-link i{
+        color: teal;
+    }
+    .phone-link a{
+        font-size: small;
+        font-family: var(--dm);
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 5px;
+        align-items: center;
+    }
+    .phone-link:hover{
+        background-color: teal;
+    }
+    .phone-link:hover *, .phone-link a:hover *{
+        color: white;
+        text-decoration: none;
+    }
+    .mb-expand{
+        text-align: right;
+        padding: .5rem 1.5rem;
+    }
+    .mb-expand i{
+        font-size: 2rem;
+    }
+    
+    .options-dropdown{
+        position: fixed;
+        height: calc(100vh - 50px);
+        width: 100vw;
+        left: 0;
+        top: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .nest-li-ul ul{
+        margin: 0px 10px;
+        padding: 5px  10px;
+        border-left: 2px solid var(--orange);
+        list-style-type: circle;
+    }
+    
+    .options-right{
+        display: grid;
+        grid-template-rows: auto 1fr;
+    }
+    
+    .options-right li{
+        padding: 5px 0px;
+        font-size: 1.2rem;
+    }
+    
+    .acc-nav{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: .5rem;
+        max-width: 200px;
+    }
+    .acc-nav button{
+        margin: 5px;
+    }
+    
+    .options-top{
+        background-color: white;
+        padding: 15px 10px;
+        box-shadow: -5px 5px 10px 2px gray;
+    }
+    .options-left, .options-bottom{
+        background-color: transparent;
+    }
+    .options-top button{
+        display: inline;
+    }
+   .options-top .login{
+    display: inline;
+    color: teal;
+    background-color: transparent;
+    border: 1px solid teal;
+   }
+
+   .options-top .signup{
+    display: inline;
+    color: white;
+    background-color: teal;
+    border: 1px solid teal;
+   }
+</style>
+<script>
+let closeOpen = document.querySelector('.mb-expand')
+let optionsDropDown = document.querySelector('.options-dropdown');
+
+let closeOpenIcons = closeOpen.querySelectorAll('i');
+const closeNavMenu =()=>{
+    closeOpenIcons.forEach(icon=>{
+        icon.classList.toggle('hidden')
+    });
+    optionsDropDown.classList.toggle('mb-hidden')
+}
+closeOpen.onclick = closeNavMenu;
+document.querySelector('.options-left').onclick = closeNavMenu;
+document.querySelector('.options-bottom').onclick = closeNavMenu;
+let expandableList = document.querySelectorAll('.nest-li-ul')
+
+expandableList.forEach(li=>{
+    let ul = li.querySelector('ul');
+    let icon = li.querySelector('i');
+
+
+    li.onmouseenter= ()=>{
+        ul.classList.remove('hidden');
+        icon.classList.remove('fa-chevron-right')
+        icon.classList.add('fa-chevron-down')
+    }
+    li.onmouseleave=()=>{
+        ul.classList.add('hidden');
+        icon.classList.add('fa-chevron-right')
+        icon.classList.remove('fa-chevron-down')
+    }
+})
+
+
+// Get a reference to the navigation bar element
+const navbar = document.getElementById('navbar');
+
+// Function to add box shadow when scrolling is done
+function toggleBoxShadow() {
+  if (window.scrollY > 0) {
+    // Add box shadow when scrolling down
+    navbar.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+  } else {
+    // Remove box shadow when at the top
+    navbar.style.boxShadow = 'none';
+  }
+}
+
+// Attach the toggleBoxShadow function to the scroll event
+window.addEventListener('scroll', toggleBoxShadow);
+
+</script>
+</div>
