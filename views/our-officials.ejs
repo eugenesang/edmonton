@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('head') %>
+
+    <body>
+        <%- include('nav') %>
+        <section id="header">
+            <div class="header-container">
+
+                <div class="header-details">
+                    <h1>Edmonton Real Estate Experts Officials</h1>
+                    <div class="">
+
+                        <div class="h-search-bar">
+                            <p>Edmonton Real Estate Expert is a new kind of real estate brokerage that offers solutions not available anywhere else. We use our own money to make your process easier, more profitable, and less risky! We’re a blend of real estate, finance, and technology brought together to meet your real estate needs in ways that are more customer friendly than the solutions available from traditional real estate brokerages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="officials">
+            <% officials.map(({name, image, description, role})=>{ %>
+                <div class="official">
+                    <div class="official-img">
+                        <img src="<%= image %>" alt="<%= name %>">
+                    </div>
+                    <div class="description">
+                        <h2 class="name"><%= name %></h2>
+                        <h5><%= role %></h5>
+                        <p><%= description %></p>
+                    </div>
+                </div>
+
+            <% }) %>
+        </section>
+        <%- include('footer') %>
+    </body>
+
+    <style>
+        p {
+            font-size: normal !important;
+        }
+
+        #header {
+            background-image: url(/images/pexels-pixabay-164522.jpg);
+            height: 70vh;
+        }
+        #officials{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            width: fit-content;
+            margin: 10px auto;
+            justify-content: space-between;
+        }
+
+        .official{
+            border-radius: 10px;
+            width: 80vw;
+            max-width: 350px;
+            background-color: whitesmoke;
+            box-shadow: 1px 1px 3px 2px gray;
+            margin: 10px auto;
+        }
+        .official-img img{
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+        }
+
+        .description   {
+            padding: 10px;
+        }
+
+        .description h5{
+            font-weight: normal;
+            font-family: var(--dm);
+            font-size: normal;
+        }
+    </style>
+
+</html>

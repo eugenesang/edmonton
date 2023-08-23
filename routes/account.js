@@ -14,7 +14,7 @@ router.post('/signup', (req, res)=>{
     const hashedPassword = bcrypt.hashSync(password, 10);
     createAccount(fullName, email, phone, hashedPassword, (err, result)=>{
         if(err){
-            res.render('error', {message: "Account creation failed, try again latter", status: 500})
+            res.render('error', {message: "Account creation failed, try again latter", status: 500, user: null})
         }else{
             console.log(result.insertId);
             let id = jwt.sign({email, id: result.insertId}, process.env.JWT_SECRET);
@@ -65,7 +65,7 @@ router.get('/', (req, res)=>{
     if(req.session.info){
         res.render('account', {...req.session.info, user: req.session.info})
     }else{
-        res.status(403).render('error', {status: 403, message: 'You are not authorized to access this page, login or create an account'});
+        res.status(403).render('error', {status: 403, message: 'You are not authorized to access this page, login or create an account', user: null});
     }
 })
 module.exports = router;

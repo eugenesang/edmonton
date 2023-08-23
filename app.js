@@ -12,6 +12,8 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
+app.use(require('./middleware/morgan'));
+
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
@@ -29,6 +31,8 @@ app.get('/local-mls', (req, res)=>{
     res.render('local-mls', {user: req.session.info? req.session.info: null})
 })
 app.use('/account', require('./routes/account'));
+
+app.use('/agent', require('./routes/agent'));
 
 const port = process.env.PORT;
 app.listen(port,()=>{

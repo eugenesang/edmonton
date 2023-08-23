@@ -1,8 +1,36 @@
-const db = require('./db');
-
+const mysql = require('mysql')
 const pool = require('./db');
+/**
+ * 
+ * @param {mysql.MysqlError} err 
+ * @param {mysql.OkPacket} data 
+ */
+function cb(err, data){
+    
+}
 
-function createAgentAccount(agentData, callback) {
+/**
+ * 
+ * @param {mysql.Query} query 
+ * @param {Array} values 
+ * @param {cb} callBack 
+ */
+function queryHandler(query, values, callBack){
+    pool.query(query, values, (err, data)=>{
+        if (err) {
+            callBack(err)
+        } else {
+            callBack(null, data)
+        }
+    })
+}
+
+/**
+ * 
+ * @param {} 
+ * @param {cb} callback 
+ */
+function createAgent(agentData, callback) {
     const { first_name, last_name, email, phone_number, website, city_area, province, existing_brokerage, account_type, franchise_interest, additional_info} = agentData;
 
     const insertQuery = `
@@ -10,95 +38,69 @@ function createAgentAccount(agentData, callback) {
   `;
 
     const values = [ first_name, last_name, email, phone_number, website, city_area, province, existing_brokerage, account_type, franchise_interest, additional_info, new Date().toISOString()];
-
-    pool.query(insertQuery, values, (err, result) => {
-        if (err) {
-            console.error('Error creating agent account:', err);
-            return callback(err);
-        }
-
-        console.log('Agent account created:', result);
-        callback(null, result);
-    });
+    queryHandler(insertQuery, values, callback);
 }
 
 
 async function deleteAgent(agentId, callBack) {
-    const deleteQuery = `
-        DELETE FROM agents
-        WHERE id = ?
-    `;
-    db.query(deleteQuery, [accountId], (err, result) => {
-        if (err) {
-            callBack(err)
-        } else {
-            callBack(null, result)
-        }
-    });
+    queryHandler(`DELETE FROM agents WHERE id = ?`, [agentId], callBack);
+}
+
+function editAgent(agentData, callBack) {
+    const { first_name, last_name, website, city_area, province, existing_brokerage, account_type, id} = agentData;
+
+    const query = `
+    UPDATE agents SET (first_name, last_name, website, city_area, province, existing_brokerage, account_type, createdAt) VALUES (?, ?, ?, ?, ?, ?, ?, ?) WHERE ID = ?
+  `;
+
+    const values = [ first_name, last_name, website, city_area, province, existing_brokerage, account_type, new Date().toISOString()];
+    queryHandler(query, values, callBack);
 }
 
 async function changePassword(agentId, newPassword, callBack) {
-
-    const updatePasswordQuery = `
-    UPDATE accounts
-    SET password = ?
-    WHERE id = ?
-  `;
-    db.query(updatePasswordQuery, [newPassword, accountId], (err, result) => {
-        if (err) {
-            callBack(err)
-        } else {
-            callBack(null, result)
-        }
-    });
-
+    queryHandler(`UPDATE agents SET password = ? WHERE id = ?`, [newPassword, agentId], callBack);
 }
 
-async function changeNameAndEmail(accountId, newName, newEmail, callBack) {
-    const updateNameAndEmailQuery = `
-        UPDATE accounts
-        SET full_name = ?, email = ?
-        WHERE id = ?
-    `;
-    db.query(updateNameAndEmailQuery, [newName, newEmail, accountId], (err, result) => {
-        if (err) {
-            callBack(err)
-        } else {
-            callBack(null, result)
-        }
-    });
-
+async function changeEmail(agentId, newEmail, callBack) {
+    queryHandler(`UPDATE agents SET email = ? WHERE id = ?`, [newEmail, agentId], callBack);
 }
 
+function findByPhone(phone, callBack){
+    queryHandler(`SELECT * FROM agents WHERE phone = ?`, [phone], callBack)
+}
 function findById(id, callBack) {
-    db.query(`SELECT * FROM accounts WHERE ID = ?`, [id], (err, result) => {
-        if (err) {
-            callBack(err);
-        } else {
-            callBack(null, result);
-        }
-    })
+    queryHandler(`SELECT * FROM agents WHERE ID = ?`, [id], callBack)
 }
 
 async function findByEmail(email, callBack) {
-    const selectAccountQuery = `
-      SELECT * FROM accounts
-      WHERE email = ?
-    `;
-    db.query(selectAccountQuery, [email], (err, result) => {
-        if (err) {
-            callBack(err)
-        } else {
-            callBack(null, result)
-        }
+    queryHandler(`SELECT * FROM agents WHERE email = ?`, [email], callBack);
+}
+
+function verify(adminId, adminSignature, comment, agentId, callBack){
+    const verification = JSON.stringify({
+        date: new Date().toISOString(),
+        by: adminId,
+        adminSignature,
+        comment,
+        agent: agentId
     });
+
+    queryHandler(`UPDATE agents SET verification = ?`, [verification], callBack);
+}
+
+function checkExistingAccount(email, phoneNumber, callBack) {
+    queryHandler('SELECT COUNT(*) AS count FROM agents WHERE email = ? OR phone_number = ?', [email, phoneNumber], callBack)
 }
 
 module.exports = {
-    createAccount,
-    deleteAccount,
+    createAgent,
+    editAgent,
     changePassword,
-    changeNameAndEmail,
+    changeEmail,
+    findByPhone,
+    findById,
+    findByPhone,
     findByEmail,
-    findById
+    verify,
+    checkExistingAccount
 };
