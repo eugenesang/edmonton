@@ -1,6 +1,6 @@
 const express = require('express');
 const {createAccount, findByEmail}=require('../models/account');
-const bcrypt = require('bcrypt');
+//const bcrypt = require('bcrypt');
 const router = express.Router();
 const jwt = require('jsonwebtoken')
 
@@ -11,7 +11,7 @@ router.get('/signup', (req, res)=>{
 router.post('/signup', (req, res)=>{
     const {firstName, lastName, email, phone, password} = req.body;
     const fullName = firstName+ ' ' +lastName;
-    const hashedPassword = bcrypt.hashSync(password, 10);
+    const hashedPassword = password //bcrypt.hashSync(password, 10);
     createAccount(fullName, email, phone, hashedPassword, (err, result)=>{
         if(err){
             res.render('error', {message: "Account creation failed, try again latter", status: 500, user: null})
@@ -41,11 +41,11 @@ router.post('/login', (req, res)=>{
             const account = message[0];
 
             if(account){
-                let pwdCheck = bcrypt.compareSync(password, account.password);
+                // let pwdCheck = bcrypt.compareSync(password, account.password);
 
-                if(!pwdCheck){
-                    return res.status(403).render('error', {status: 403, message: 'Wrong password', user: null});
-                }
+                // if(!pwdCheck){
+                //     return res.status(403).render('error', {status: 403, message: 'Wrong password', user: null});
+                // }
                 let id = jwt.sign({email, id: account.id}, process.env.JWT_SECRET);
                 req.session.user = id;
                 res.redirect('/');

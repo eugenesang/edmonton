@@ -1,273 +1,437 @@
 <div>
-    
-<nav id="navbar">
-    <div class="company-brand" onclick="location.href='/'">
-        <img src="/images/edmonton full logo.svg" alt="Edmonton Real Estate Experts full logo">
-    </div>
-    <div class="nav-right">
-        <div >
-            <button class="phone-link"><a href="tel:+18778504448">
-                <i class="fa-solid fa-phone"></i> <span>1-877-850-4448</span>
-            </a></button>
-            
-        </div>
-        <div>
-            <div class="mb mb-expand">
-                <span class="mb-hidden">More </span>
-                <i class="fa-solid fa-xmark hidden"></i>
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="mb-hidden options-dropdown">
-                <div class="options-left"></div>
-                <ul class="options-right">
 
-                    <div class="options-top">
-                        <li class="nest-li">
-                            <ul class="nest-li-ul">
-                                <li>Buy & Sell <i class="fa-solid fa-chevron-right"></i></li>
-                                <ul class="hidden">
-                                    <li> <a href="/swift-sale">Swift Sale</a></li>
-                                    <li><a href="/local-mls">Listing on the Local MLS</a></li>
-                                    <li><a href="/agent">Cooperating agents</a></li>
-                                </ul>
-                            </ul>
-                        </li>
-                        <li class="nest-li">
-                            <ul class="nest-li-ul">
-                                <li>Browser homes <i class="fa-solid fa-chevron-right"></i></li>
-                                <li>
-                                    <ul class="hidden">
-                                        <li>List & Map</li>
-                                        <li>Show List</li>
-                                        <li>Show Map</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>What is my worth</li>
-                        <li class="nest-li">
-                            <ul class="nest-li-ul">
-                                <li>Info <i class="fa-solid fa-chevron-right"></i></li>
-                                <li>
-                                    <ul class="hidden">
-                                        <li>Blog</li>
-                                        <li>Access Sold Data</li>
-                                        <li>We Buy Houses</li>
-                                        <li>Sell My Houses</li>
-                                        <li>A better guarantee</li>
-                                        <li>Edmonton Listings</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>About us</li>
-                        <li><a href="/agent/officials">Our agents</a></li>
-                        <li>Contact</li>
-                        <% if(user) {%>
-                            <li class="acc-nav">
-                                <button class="login" onclick="location.href='/account/'"> <i class="fa-solid fa-user"></i> <%= user.full_name.split(' ')[0] %></button>
-                                <button class="signup" onclick="location.href='/account/logout'">Logout</button>
-                            </li>
-                        <% }else{ %>
-                            <li class="acc-nav">
-                                <button class="login" onclick="location.href='/account/login'">Log In</button>
-                                <button class="signup" onclick="location.href='/account/signup'">Sign Up</button>
-                            </li>
-                        <% } %>
-                        <li>
-                            <button class="estimates-btn">See My Estimates</button>
-                        </li>
+    <nav id="navbar">
+        <div class="company-logo">
+            <a href="/" title="Back to home">
+                <img src="./images/tar logo-bodered.png" alt="Trusted Advisers Realty">
+            </a>
+        </div>
+        <div class="options-container">
+            <div class="nav-strip" id="navStrip">
+                <div class="nav-buttons">
+                    <div>
+                        <button class="estimates">See my estimates</button>
                     </div>
-                    <div class="options-bottom">
+                    <span class="space-4"> </span>
+                    <div>
+                        <button class="phone-link">
+                            <a href="tel:+18778504448">
+                                <i class="fa-solid fa-phone"></i> 
+                                <span>1-877-850-4448</span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <div class="open-close-button" id="svg-container">
+                    <svg viewBox="0 0 80 80" id="open-close-icon">
+                        <rect x="20" y="10" width="60" height="10" fill="teal" rx="5" ry="5" class="top-rect"></rect>
+                        <rect x="0" y="35" width="80" height="10" fill="teal" rx="5" ry="5" class="middle-rect"></rect>
+                        <rect x="10" y="60" width="70" height="10" fill="teal" rx="5" ry="5" class="bottom-rect"></rect>
                         
-                    </div>
-                </ul>
+                    </svg>
+                </div>
             </div>
-
+            <div id="menu" class="hidden">
+                <div class="menu-left"></div>
+                <div class="menu-right">
+                    <ul id="level1">
+                        <li class="level1-option">
+                            <div class="menu-title">
+                                <span>Selling</span>
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <ul class="menu-content collapsed">
+                                <li class="level2-option">
+                                    <a href="/sell-to-us">Sell to us</a>
+                                </li>
+                                <li class="level2-option">List with us</li>
+                                <li class="level2-option">Creative listing</li>
+                                <li class="level2-option">Free listing</li>
+                            </ul>
+                        </li>
+                        <li class="level1-option">
+                            <div class="menu-title">
+                                <span>Buying</span>
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <ul class="menu-content collapsed">
+                                <li class="level2-option">New to Canada</li>
+                                <li class="level2-option">First time buyers</li>
+                                <li class="level2-option">Rent to own buyers</li>
+                            </ul>
+                        </li>
+                        <li class="level1-option">
+                            <div class="menu-title">
+                                <span>Investing</span>
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <ul class="menu-content collapsed">
+                                <li class="level2-option">Single family investing</li>
+                                <li class="level2-option">Multiple family investment</li>
+                                <li class="level2-option">Join our investor community</li>
+                            </ul>
+                        </li>
+                        <li class="level1-option">
+                            <div class="menu-title">
+                                <span>Property Management</span>
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <ul class="menu-content collapsed">
+                                <li class="level2-option">Tenants</li>
+                                <li class="level2-option">Land lords</li>
+                                <li class="level2-option">Post your rent-free</li>
+                            </ul>
+                        </li>
+                        <li class="acc-nav">
+                            <button class="login" onclick="location.href='/account/login'">Log In</button>
+                            <button class="sign-up" onclick="location.href='/account/signup'">Sign Up</button>
+                        </li>
+                    </ul>
+                    <div class="menu-bottom-right">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    
-</nav>
-<style>
-    nav a:visited{
-        color: black;
-    }
-    .mb-hidden{
-        display: none;
-    }
-    nav{
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 1rem;
-        position: fixed;
-        top: 0px;
-        right: 0px;
-        width: 100vw;
-        background-color: white;
-        z-index: 100;
-    }
-    .company-brand{
-        padding: .5rem;
-    }
-    
-    .company-brand img {
-        aspect-ratio: 1532 / 327; 
-        height: 2.5rem;
-        max-width: 35vw;
-    }
-    
-    .nav-right{
-        display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: center;
-    }
-    
-    .nav-right button{
-        margin-right: 5px;
-    }
-    
-    .phone-link{
-        background-color: transparent;
-        border: 2px solid teal;
-    }
-    .phone-link i{
-        color: teal;
-    }
-    .phone-link a{
-        font-size: small;
-        font-family: var(--dm);
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 5px;
-        align-items: center;
-    }
-    .phone-link:hover{
-        background-color: teal;
-    }
-    .phone-link:hover *, .phone-link a:hover *{
-        color: white;
-        text-decoration: none;
-    }
-    .mb-expand{
-        text-align: right;
-        padding: .5rem 1.5rem;
-    }
-    .mb-expand i{
-        font-size: 2rem;
-    }
-    
-    .options-dropdown{
-        position: fixed;
-        height: calc(100vh - 50px);
-        width: 100vw;
-        left: 0;
-        top: 60px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .nest-li-ul ul{
-        margin: 0px 10px;
-        padding: 5px  10px;
-        border-left: 2px solid var(--orange);
-        list-style-type: circle;
-    }
-    
-    .options-right{
-        display: grid;
-        grid-template-rows: auto 1fr;
-    }
-    
-    .options-right li{
-        padding: 5px 0px;
-        font-size: 1.2rem;
-    }
-    
-    .acc-nav{
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: .5rem;
-        max-width: 200px;
-    }
-    .acc-nav button{
-        margin: 5px;
-    }
-    
-    .options-top{
-        background-color: white;
-        padding: 15px 10px;
-        box-shadow: -5px 5px 10px 2px gray;
-    }
-    .options-left, .options-bottom{
-        background-color: transparent;
-    }
-    .options-top button{
-        display: inline;
-    }
-   .options-top .login{
-    display: inline;
-    color: teal;
-    background-color: transparent;
-    border: 1px solid teal;
-   }
 
-   .options-top .signup{
-    display: inline;
-    color: white;
-    background-color: teal;
-    border: 1px solid teal;
-   }
-</style>
-<script>
-let closeOpen = document.querySelector('.mb-expand')
-let optionsDropDown = document.querySelector('.options-dropdown');
-
-let closeOpenIcons = closeOpen.querySelectorAll('i');
-const closeNavMenu =()=>{
-    closeOpenIcons.forEach(icon=>{
-        icon.classList.toggle('hidden')
-    });
-    optionsDropDown.classList.toggle('mb-hidden')
-}
-closeOpen.onclick = closeNavMenu;
-document.querySelector('.options-left').onclick = closeNavMenu;
-document.querySelector('.options-bottom').onclick = closeNavMenu;
-let expandableList = document.querySelectorAll('.nest-li-ul')
-
-expandableList.forEach(li=>{
-    let ul = li.querySelector('ul');
-    let icon = li.querySelector('i');
+    </nav>
+    <style>
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100vw;
+            z-index: 990;
+        }
 
 
-    li.onmouseenter= ()=>{
-        ul.classList.remove('hidden');
-        icon.classList.remove('fa-chevron-right')
-        icon.classList.add('fa-chevron-down')
-    }
-    li.onmouseleave=()=>{
-        ul.classList.add('hidden');
-        icon.classList.add('fa-chevron-right')
-        icon.classList.remove('fa-chevron-down')
-    }
-})
+        nav .company-logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 5px;
+            z-index: 999;
+        }
+
+        nav .company-logo img {
+            height: 40px;
+            width: 40px;
+        }
+
+        .nav-strip {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            background-color: whitesmoke;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100vw;
+            z-index: 10;
+        }
+
+        .nav-buttons {
+            text-align: left;
+            display: grid;
+            grid-template-columns: 1fr 20px 1fr;
+            padding-left: 75px;
+        }
+
+        .nav-buttons>div:nth-of-type(1) {
+            text-align: right;
+        }
+
+        .nav-buttons>div:nth-of-type(2) {
+            text-align: center;
+        }
+
+        .phone-link {
+            list-style-type: none;
+            font-family: rubik;
+            transition: ease 400ms;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: white;
+            background-color: transparent;
+            border: 2px solid teal;
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        .phone-link i {
+            color: teal;
+        }
+
+        .phone-link a {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            transition: ease 400ms;
+            text-decoration: none;
+            color: black;
+            font-size: small;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 5px;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 768px){
+            nav .nav-buttons button, .phone-link a *{
+                font-size: 12px;
+            }
+        }
+
+        .phone-link:hover {
+            background-color: teal;
+        }
+
+        .phone-link:hover *,
+        .phone-link a:hover * {
+            color: white;
+            text-decoration: none;
+        }
+
+        .space-4 {
+            padding: 0px 10px;
+        }
+
+        button.estimates {
+
+            list-style-type: none;
+            transition: ease 400ms;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: rgb(107, 109, 186);
+            border: 2px solid rgb(102, 103, 171);
+            color: white;
+            font-family: rubik;
+            display: inline-block;
+        }
+
+        button.estimates:hover {
+            background-color: white;
+            color: rgb(102, 103, 171);
+            transition: 400ms ease;
+        }
+
+        .open-close-button {
+            text-align: right;
+            padding: 5px;
+            padding-right: 25px;
+        }
 
 
-// Get a reference to the navigation bar element
-const navbar = document.getElementById('navbar');
 
-// Function to add box shadow when scrolling is done
-function toggleBoxShadow() {
-  if (window.scrollY > 0) {
-    // Add box shadow when scrolling down
-    navbar.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
-  } else {
-    // Remove box shadow when at the top
-    navbar.style.boxShadow = 'none';
-  }
-}
+        .open-close-button svg {
+            height: 35px;
+            cursor: pointer;
+        }
 
-// Attach the toggleBoxShadow function to the scroll event
-window.addEventListener('scroll', toggleBoxShadow);
+        .x-shape .top-rect {
+            transform: translateY(4.2px) translateX(-31.8px) rotate(45deg);
+            fill: var(--pink);
+        }
 
-</script>
+        .x-shape .bottom-rect {
+            transform: translateY(-9.9px) translateX(-25.2px) rotate(-45deg);
+            fill: var(--pink);
+        }
+
+        .x-shape .bottom-rect,
+        .x-shape .top-rect {
+            transform-origin: center;
+            width: 80px;
+        }
+
+        .x-shape .middle-rect {
+            transform: translateX(185px) rotate(90deg);
+        }
+
+        .bottom-rect,
+        .middle-rect,
+        .top-rect {
+            transition-duration: 400ms;
+            transition-timing-function: ease;
+        }
+
+        
+
+        #menu {
+            width: 100%;
+            height: calc(100vh - 50px);
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            transition-duration: 400ms;
+            transition-timing-function: ease;
+        }
+
+        .level1-option {
+            padding: 5px;
+            margin: 10px 0px;
+            font-family: abel;
+        }
+
+        .menu-left {
+            background-color: #bebebe4e;
+            backdrop-filter: blur(10px);
+            z-index: 0;
+        }
+
+        .menu-right {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            height: 100%;
+            background-color: #3177d8;
+        }
+        
+        .menu-content {
+            padding: 0px 10px;
+            margin-left: 20px;
+            border-left: 2px solid rgb(0, 187, 187);
+        }
+
+        #level1{
+            max-height: calc(100vh - 50px);
+            padding: 10px;
+            min-width: 40vw;
+            overflow-y: scroll;
+            margin-bottom: 10px;
+        }
+
+        #level1::-webkit-scrollbar{
+            width: 5px;
+            margin: 10px;
+        }
+
+        #level1::-webkit-scrollbar-thumb{
+            border-radius: 5px;
+            background-color: #ffed62;
+            
+        }
+
+        .menu-content.collapsed {
+            display: none;
+        }
+
+        .menu-title {
+            font-size: large;
+            font-weight: 600;
+            display: grid;
+            gap: 50px;
+            grid-template-columns: 1fr 30px;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        .menu-title:hover {
+            color: white;
+        }
+
+        .menu-title.collapsed:hover {
+            color: pink;
+        }
+
+        .level2-option {
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: fit-content;
+            font-family: abel;
+        }
+
+        .level2-option:hover {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            color: #ffffff;
+        }
+
+        li.acc-nav {
+            list-style-type: none;
+            margin: 0px auto;
+            font-family: "Nunito", serif;
+            transition: ease 400ms;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: .5rem;
+            padding: 5px 0px;
+            width: fit-content;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        button.login {
+            list-style-type: none;
+            font-family: "Nunito", serif;
+            transition: ease 400ms;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: medium;
+            margin: 5px;
+            display: inline;
+            color: #c4ffff;
+            background-color: transparent;
+            border: 1px solid #c4ffff;
+            min-width: 100px;
+        }
+
+        button.sign-up {
+            font-family: "Nunito", serif;
+            transition: ease 400ms;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: medium;
+            margin: 5px;
+            display: inline;
+            color: #3177d8;
+            background-color: #c4ffff;
+            border: 1px solid #c4ffff;
+            min-width: 100px;
+        }
+    </style>
+    <script>
+        function closeNavOptions() {
+            document.querySelector("#open-close-icon").classList.toggle('x-shape');
+            document.querySelector("#menu").classList.toggle('hidden');
+        }
+
+        document.getElementById("open-close-icon").addEventListener("click", closeNavOptions);
+
+        document.querySelector('.menu-left').addEventListener("click", closeNavOptions);
+        document.querySelector('.menu-bottom-right').addEventListener('click', closeNavOptions)
+
+        document.querySelectorAll('.level1-option').forEach(option => {
+            const title = option.querySelector('.menu-title');
+            title.addEventListener("click", () => {
+
+                const content = option.querySelector('.menu-content');
+                const icon = option.querySelector('i');
+                icon.classList.toggle('fa-minus');
+                icon.classList.toggle('fa-plus');
+                content.classList.toggle('collapsed');
+                title.classList.toggle('collapsed')
+            })
+        })
+
+
+        // Get a reference to the navigation bar element
+        const navbar = document.getElementById('navStrip');
+
+        // Function to add box shadow when scrolling is done
+        function toggleBoxShadow() {
+            if (window.scrollY > 0) {
+                // Add box shadow when scrolling down
+                navbar.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+            } else {
+                // Remove box shadow when at the top
+                navbar.style.boxShadow = 'none';
+            }
+        }
+
+        // Attach the toggleBoxShadow function to the scroll event
+        window.addEventListener('scroll', toggleBoxShadow);
+
+    </script>
 </div>

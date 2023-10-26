@@ -22,8 +22,11 @@ app.use(session({
 app.use(checkLogin);
 
 app.get('/', (req, res)=>{
-    res.render('index', {user: req.session.info? req.session.info: null})    
+    res.render('tar-index', {user: req.session.info? req.session.info: null})    
 });
+app.get('/og', (req, res)=>{
+    res.render('index', {user: req.session.info? req.session.info: null})
+})
 app.get('/swift-sale', (req, res)=>{
     res.render('swift-sale', {user: req.session.info? req.session.info: null})    
 })
@@ -33,7 +36,9 @@ app.get('/local-mls', (req, res)=>{
 app.use('/account', require('./routes/account'));
 
 app.use('/agent', require('./routes/agent'));
-
+app.get('/sell-to-us', (req, res)=>{
+    res.render("sell-to-us");
+})
 const port = process.env.PORT;
 app.listen(port,()=>{
     console.log(`http://127.0.0.1:${port}`)

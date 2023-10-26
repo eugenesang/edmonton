@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('head') %>
+<body>
+    <div class="body-wrapper page ">
+        <%- include("nav") %>
+            <header>
+
+                <div class="header-left-container">
+                    <div class="header-left">
+                        <div class="header-left-toptext">
+                            <h1>Sell to Trusted Advisers Realty</h1>
+                        </div>
+                        <form id="guide-search-bar" action="#" method="post">
+                            <div class="input-container">
+                                <input type="text" name="address" id="search-input" placeholder="Enter your address" required="" autocomplete="off">
+                            </div>
+                            <button id="guide-search-btn">
+                                <i class="fas fa-magnifying-glass"></i>
+                                <span>Instant Evaluation</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-right-image">
+                        <img src="images/lady-holding-hammer.png" alt="">
+                    </div>
+                </div>
+            </header>
+            <main>
+                <section id="guide-section">
+                    
+                    <div id="saleGuarantee">
+
+                        <section id="guide">
+                            <div class="guide-container">
+                                <article class="guide-card">
+                                    <div class="guide-img">
+                                        <img src="./images/pexels-andrea-piacquadio-3756681.jpg" alt="">
+                                    </div>
+                                    <div class="guide-txt">
+                                        <h3>Book a home visit or video walkthrough</h3>
+                                        
+
+                                    </div>
+                                </article>
+                                <article class="guide-card">
+                                    <div class="guide-img">
+                                        <img src="./images/african-american-technician-checks-maintenance-solar-panels-group-three-black-engineers-meeting-solar-station.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="guide-txt">
+                                        <h3>Choose to move out and get instant cash</h3>
+                                        
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                        <form id="guide-search-bar" action="#" method="post">
+                            <div class="input-container">
+                                <input type="text" name="address" id="search-input" placeholder="Enter your address" required="" autocomplete="off">
+                            </div>
+                            <button id="guide-search-btn">
+                                <i class="fas fa-magnifying-glass"></i>
+                                <span>Instant Evaluation</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </section>
+
+                
+                
+                
+                <%- include('estimates') %>
+
+            </main>
+            <%- include('footer') %>
+    </div>
+    <style>
+        
+        #saleGuarantee{
+            background-color: whitesmoke;
+        }
+        #guide-search-bar{
+            background-color: #ffffff;
+        }
+
+        #guide-search-bar input{
+            color: black;
+        }
+        #guide-search-bar #guide-search-btn{
+            background-color: rgb(102, 103, 171) !important;
+            border: none;
+        }
+        @media screen and (max-width: 768px){
+            #guide-search-bar {
+                max-width: 80vw;
+            }
+        }
+
+        .guide-container{
+            display: block;
+        }
+
+        .guide-card{
+            display: grid;
+            width: unset;
+            grid-template-columns: auto 1fr;
+            margin: 10px auto;
+            background: rgb(202, 202, 202);
+        }
+
+        .guide-img img{
+            max-height: 35vh;
+            max-width: 40vw;
+            border-radius: 5px 0px 0px 5px;
+        }
+        .guide-txt{
+            display: grid;
+            align-items: center;
+        }
+        @media screen and (max-width: 768px){
+            #saleGuarantee .guide-card .guide-txt h3{
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+</body>
+</html>

@@ -5,15 +5,16 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect --inspect-port=9234 app.js"
+    "start": "nodemon --inspect --inspect-port=9234 app.js",
+    "dev": "nodemon app"
   },
   "author": "Eugene Sang",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^5.1.1",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
+    "https": "^1.0.0",
     "jsonwebtoken": "^9.0.1",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",

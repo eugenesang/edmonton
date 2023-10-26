@@ -67,44 +67,48 @@
     </div>
 </section>
 <style>
-    
-#estimates{
-    background-color: teal;
-    padding: 2rem;
-}
-#estimates h3{
-    color: white;
-}
-#estimates > div{
-    border-top: 2px solid white;
-    padding: 1rem .25rem;
-}
+    #estimates {
+        background-color: teal;
+        padding: 2rem;
+    }
 
-.towns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    width: fit-content;
-    max-width: 90vw;
-    margin: 10px auto 10px 1rem;
-}
+    #estimates h3 {
+        color: white;
+    }
 
-.towns a {
-    display: block;
-    text-align: center;
-    padding: 5px;
-    background-color: #dcdcdc;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #000000;
-    max-width: 200px;
-    border: 1px solid teal;
-}
+    #estimates>div {
+        border-top: 2px solid white;
+        padding: 1rem .25rem;
+    }
 
-.towns a:hover{
-    background-color: teal;
-    color: white;
-    border-color: white;
-}
+    .towns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: fit-content;
+        max-width: 90vw;
+        margin: 10px 0px;
+    }
 
+    .towns a {
+        flex: 1;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-right: 10px;
+        text-align: center;
+        padding: 5px;
+        background-color: #dcdcdc;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #000000;
+        width: 150px;
+        max-width: 30vw;
+        border: 1px solid teal;
+    }
+
+    .towns a:hover {
+        background-color: teal;
+        color: white;
+        border-color: white;
+    }
 </style>

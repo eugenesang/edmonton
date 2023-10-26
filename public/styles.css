@@ -1,19 +1,18 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;800&family=DM+Serif+Display&display=swap');
 @import url("https://use.typekit.net/psb8eyo.css");
 
 :root{
-    --orange: rgb(255, 182, 0);
-    --text-color: #ffa600;
-    --dm: "DM Serif Display";
+    --orange: rgb(28, 98, 239);
+    --text-color: #0008ff;
+    --dm: Abel;
 }
 
 *{
     list-style-type: none;
     padding: 0;
     margin: 0;
-    font-family: "adobe-garamond-pro", serif;
+    font-family: Abel;
     transition: ease 400ms;
 }
 ::-webkit-scrollbar{
@@ -41,7 +40,7 @@ h3{
 }
 
 h1, h2, h3{
-    font-family: "DM Serif Display";
+    font-family: nunito;
 }
 a{
     text-decoration: none;
@@ -62,7 +61,8 @@ button{
     border: 1px solid var(--orange);
     color: white;
     margin: 7px auto;
-    font-size: medium;
+    font-family: abel;
+    cursor: pointer;
 }
 
 button:hover{
@@ -100,11 +100,11 @@ button:hover{
 }
 
 .header-details h1{
-    font-family: "Dm Serif Display";
+    font-family: "Abel";
     font-size: 3.5rem; /* Adjust the font size as needed */
     font-weight: 800;
-    color: var(--orange); /* Inner color */
-    text-shadow: 1px 2px rgb(84, 84, 84), -2px -2px rgb(0, 0, 0);
+    color: teal; /* Inner color */
+    text-shadow: 1px 2px rgb(84, 84, 84), -2px -2px rgb(0, 83, 83);
     cursor: pointer;
     text-align: left;
     width: 100%;
