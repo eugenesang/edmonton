@@ -52,19 +52,7 @@
             <a href="/worth/SylvanLake">Sylvan Lake</a>
         </div>
     </div>
-    <div>
-        <h3>Manitoba Home Estimates</h3>
-        <div class="towns">
-            <a href="/worth/Winnipeg">Winnipeg</a>
-        </div>
-    </div>
-    <div>
-        <h3>Saskatchewan Home Estimates</h3>
-        <div class="towns">
-            <a href="/worth/Regina">Regina</a>
-            <a href="/worth/Saskastoon">Saskatoon</a>
-        </div>
-    </div>
+   
 </section>
 <style>
     #estimates {
@@ -73,6 +61,7 @@
     }
 
     #estimates h3 {
+        font-family: var(--dm);
         color: white;
     }
 
@@ -82,33 +71,47 @@
     }
 
     .towns {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
         gap: 10px;
         width: fit-content;
         max-width: 90vw;
         margin: 10px 0px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        flex-wrap: wrap;
     }
 
     .towns a {
-        flex: 1;
-        white-space: nowrap;
         text-overflow: ellipsis;
-        margin-right: 10px;
         text-align: center;
-        padding: 5px;
-        background-color: #dcdcdc;
-        border-radius: 5px;
+        color: #b7e1ff;
+        position: relative;
         text-decoration: none;
-        color: #000000;
-        width: 150px;
-        max-width: 30vw;
-        border: 1px solid teal;
+        max-width: fit-content;
+        padding: 5px 10px;
     }
 
     .towns a:hover {
         background-color: teal;
         color: white;
-        border-color: white;
+    }
+
+
+    .towns a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #bfe9ff;
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+    }
+
+    .towns a:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
     }
 </style>

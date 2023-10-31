@@ -9,32 +9,32 @@
         <div>
             <h3>NAVIGATION</h3>
             <ul>
-                <li><a href="#">Swift Sale </a></li>
-                <li><a href="">Listing on the local</a></li>
-                <li><a href="">MLS</a></li>
-                <li><a href="">Home Swap</a></li>
-                <li><a href="">Q & A</a></li>
+                <li><a class="learn-more-link" href="#">Swift Sale </a></li>
+                <li><a class="learn-more-link" href="">Listing on the local</a></li>
+                <li><a class="learn-more-link" href="">MLS</a></li>
+                <li><a class="learn-more-link" href="">Home Swap</a></li>
+                <li><a class="learn-more-link" href="">Q & A</a></li>
             </ul>
         </div>
         <div>
             <h3>CONTACT US</h3>
             <ul>
                 <li>
-                    <a href="">
+                    <a class="learn-more-link" href="">
                         <i class="fa-brands fa-facebook"></i>
-                        <span>FACEBOOK </span>
+                        Facebook
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a class="learn-more-link" href="">
                         <i class="fa-brands fa-instagram"></i>
-                        <span>INSTAGRAM</span>
+                        Instagram
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a class="learn-more-link" href="">
                         <i class="fa-brands fa-youtube"></i>
-                        <span>YOUTUBE</span>
+                        YouTube
                     </a>
                 </li>
             </ul>
@@ -42,25 +42,23 @@
         <div>
             <h3>POPULAR</h3>
             <ul>
-                <li><a href="">What's My Home</a></li>
-                <li><a href="">Worth?</a></li>
-                <li><a href="">Homes For Sale </a></li>
-                <li><a href="">Access Sold Data </a></li>
-                <li><a href="">We Buy Houses </a></li>
-                <li><a href="">Sell My House</a></li>
+                <li><a class="learn-more-link" href="">What's My Home</a></li>
+                <li><a class="learn-more-link" href="">Worth?</a></li>
+                <li><a class="learn-more-link" href="">Homes For Sale </a></li>
+                <li><a class="learn-more-link" href="">Access Sold Data </a></li>
+                <li><a class="learn-more-link" href="">We Buy Houses </a></li>
+                <li><a class="learn-more-link" href="">Sell My House</a></li>
             </ul>
         </div>
     </div>
 </footer>
-<div>
-    <div></div>
-</div>
+
 <div class="tnc">
-    <a href="">Privacy Policy</a>
+    <a class="learn-more-link" href="">Privacy Policy</a>
     <br>
-    <a href="">Terms of Service</a>
+    <a class="learn-more-link" href="">Terms of Service</a>
     <br><br>
-    <small>&copy; EdmontonRealEstateExperts <span class="year"></span></small>
+    <small style="cursor: pointer;">&copy; Trusted Advisers Realty <span class="year"></span></small>
 </div>
 <style>
 footer{
@@ -106,16 +104,24 @@ footer .company-logo img{
 }
 
 .footer-container  li a *{
-    color: var(--text-color);
+    color: white;
 }
-.footer-container a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+footer a.learn-more-link, .tnc a.learn-more-link {
+    color: white;
+    margin: 0px;
+    font-weight: 500;
 }
 
-.footer-container a:hover {
-    color: #ff5733;
+footer a.learn-more-link:after, .tnc a.learn-more-link:after, .tnc a.learn-more-link:before, footer a.learn-more-link:before{
+    border-bottom-color: white;
+}
+
+footer a:hover {
+    color: #6f1400;
+}
+
+.tnc a.learn-more-link:hover{
+    color: black;
 }
 
 .footer-container .fa-brands {

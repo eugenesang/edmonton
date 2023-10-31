@@ -3,20 +3,21 @@
     <nav id="navbar">
         <div class="company-logo">
             <a href="/" title="Back to home">
-                <img src="./images/tar logo-bodered.png" alt="Trusted Advisers Realty">
+                <img src="/images/tar logo-bodered.png" alt="Trusted Advisers Realty">
             </a>
         </div>
         <div class="options-container">
             <div class="nav-strip" id="navStrip">
                 <div class="nav-buttons">
-                    <div>
-                        <button class="estimates">See my estimates</button>
+                    <div class="nav-estimates-btn-container">
+                        <button class="estimates">
+                            <span>See my estimates</span>
+                        </button>
                     </div>
-                    <span class="space-4"> </span>
                     <div>
                         <button class="phone-link">
                             <a href="tel:+18778504448">
-                                <i class="fa-solid fa-phone"></i> 
+                                <i class="fa-solid fa-phone"></i>
                                 <span>1-877-850-4448</span>
                             </a>
                         </button>
@@ -27,13 +28,13 @@
                         <rect x="20" y="10" width="60" height="10" fill="teal" rx="5" ry="5" class="top-rect"></rect>
                         <rect x="0" y="35" width="80" height="10" fill="teal" rx="5" ry="5" class="middle-rect"></rect>
                         <rect x="10" y="60" width="70" height="10" fill="teal" rx="5" ry="5" class="bottom-rect"></rect>
-                        
+
                     </svg>
                 </div>
             </div>
             <div id="menu" class="hidden">
                 <div class="menu-left"></div>
-                <div class="menu-right">
+                <div class="menu-right" data-scroll-section>
                     <ul id="level1">
                         <li class="level1-option">
                             <div class="menu-title">
@@ -44,7 +45,12 @@
                                 <li class="level2-option">
                                     <a href="/sell-to-us">Sell to us</a>
                                 </li>
-                                <li class="level2-option">List with us</li>
+                                <li class="level2-option">
+                                    <a href="/swift-sale">Swift sale</a>
+                                </li>
+                                <li class="level2-option">
+                                    <a href="/local-mls">List with us</a>
+                                </li>
                                 <li class="level2-option">Creative listing</li>
                                 <li class="level2-option">Free listing</li>
                             </ul>
@@ -86,6 +92,12 @@
                             <button class="login" onclick="location.href='/account/login'">Log In</button>
                             <button class="sign-up" onclick="location.href='/account/signup'">Sign Up</button>
                         </li>
+                        <div>
+                            <a href="/why-us" class="learn-more-link">Why us</a>
+                        </div>
+                        <div>
+                            <a href="/agent/signup" class="learn-more-link">Cooperating agents</a>
+                        </div>
                     </ul>
                     <div class="menu-bottom-right">
                     </div>
@@ -132,18 +144,34 @@
         .nav-buttons {
             text-align: left;
             display: grid;
-            grid-template-columns: 1fr 20px 1fr;
-            padding-left: 75px;
+            grid-template-columns: 1fr auto;
+            gap: 10px;
         }
 
-        .nav-buttons>div:nth-of-type(1) {
+        .nav-estimates-btn-container {
             text-align: right;
+            display: grid;
+            align-items: center;
+            justify-content: end;
         }
 
         .nav-buttons>div:nth-of-type(2) {
             text-align: center;
+
         }
 
+        @media (min-width: 768px) {
+            .nav-buttons {
+                grid-template-columns: 1fr 300px;
+            }
+        }
+
+        nav a.learn-more-link{
+            color: white;
+        }
+        nav a.learn-more-link:after, nav a.learn-more-link:before{
+            border-bottom-color: white;
+        }
         .phone-link {
             list-style-type: none;
             font-family: rubik;
@@ -155,6 +183,7 @@
             border: 2px solid teal;
             margin-right: 5px;
             display: inline-block;
+            width: fit-content;
         }
 
         .phone-link i {
@@ -175,8 +204,10 @@
             align-items: center;
         }
 
-        @media screen and (max-width: 768px){
-            nav .nav-buttons button, .phone-link a *{
+        @media screen and (max-width: 768px) {
+
+            nav .nav-buttons button,
+            .phone-link a * {
                 font-size: 12px;
             }
         }
@@ -191,10 +222,6 @@
             text-decoration: none;
         }
 
-        .space-4 {
-            padding: 0px 10px;
-        }
-
         button.estimates {
 
             list-style-type: none;
@@ -205,7 +232,7 @@
             border: 2px solid rgb(102, 103, 171);
             color: white;
             font-family: rubik;
-            display: inline-block;
+            width: fit-content;
         }
 
         button.estimates:hover {
@@ -213,6 +240,7 @@
             color: rgb(102, 103, 171);
             transition: 400ms ease;
         }
+
 
         .open-close-button {
             text-align: right;
@@ -225,6 +253,20 @@
         .open-close-button svg {
             height: 35px;
             cursor: pointer;
+        }
+
+        @media (max-width: 400px) {
+            button.estimates span {
+                font-size: 12px;
+            }
+
+            .open-close-button {
+                padding: 3px;
+            }
+
+            .open-close-button svg {
+                height: 30px;
+            }
         }
 
         .x-shape .top-rect {
@@ -254,7 +296,7 @@
             transition-timing-function: ease;
         }
 
-        
+
 
         #menu {
             width: 100%;
@@ -284,14 +326,14 @@
             height: 100%;
             background-color: #3177d8;
         }
-        
+
         .menu-content {
             padding: 0px 10px;
             margin-left: 20px;
             border-left: 2px solid rgb(0, 187, 187);
         }
 
-        #level1{
+        #level1 {
             max-height: calc(100vh - 50px);
             padding: 10px;
             min-width: 40vw;
@@ -299,15 +341,15 @@
             margin-bottom: 10px;
         }
 
-        #level1::-webkit-scrollbar{
+        #level1::-webkit-scrollbar {
             width: 5px;
             margin: 10px;
         }
 
-        #level1::-webkit-scrollbar-thumb{
+        #level1::-webkit-scrollbar-thumb {
             border-radius: 5px;
             background-color: #ffed62;
-            
+
         }
 
         .menu-content.collapsed {

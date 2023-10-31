@@ -36,6 +36,10 @@ app.get('/local-mls', (req, res)=>{
 app.use('/account', require('./routes/account'));
 
 app.use('/agent', require('./routes/agent'));
+
+app.get('/why-us', (req, res)=>{
+    res.render('why-us');
+})
 app.get('/sell-to-us', (req, res)=>{
     res.render("sell-to-us");
 })

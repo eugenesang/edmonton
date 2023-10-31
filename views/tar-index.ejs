@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+        <script>
+            (function () {
+                const locomotiveScroll = new LocomotiveScroll();
+            })();
+        </script>
 </head>
 
 <body>
@@ -21,31 +27,35 @@
                 <div class="header-left-container">
                     <div class="header-left">
                         <div class="header-left-toptext">
-                            <h1> Worried that:</h1>
+                            <h1>Stop Guessing!</h1>
+                            <h1>Start Knowing,</h1>
                         </div>
                         <div class="header-left-quiz">
-                            <h3 class="h-h3 e1">Your home may not sell?</h3>
-                            <h3 class="h-h3 e2">May take months to sell?</h3>
-                            <h3 class="h-h3 e3">May sell for less than you need?</h3>
+                            <h3 class="h-h3 e1">How much and how fast you home will sell</h3>
                         </div>
-                        <div class="h-call-button">
-                            <button class="phone-link">
-                                <a href="tel:+18778504448">
-                                    <i class="fa-solid fa-phone"></i> 
-                                    <span>Call us now!</span>
-                                </a>
-                            </button>
+                        <div class="h-txt-container">
+                            <p>Accept our cash offer to sell without showings! Test the MLS for a higher price if you choose.</p>
+                            <form class="guide-search-bar header-form" action="#" method="post">
+                                <div class="input-container">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <input type="text" name="address" id="search-input" placeholder="Enter your address" required="" autocomplete="off">
+                                </div>
+                                <button class="guide-search-btn">
+                                    <i class="fas fa-magnifying-glass"></i>
+                                    <span>Instant Evaluation</span>
+                                </button>
+                            </form>
                         </div>
                         <div class="header-left-info">
                             <p>
-                                THE ONL TRIPLE GUARANTEE BROKERAGE IN ALBERTA →
+                                <a href="" class="learn-more-link">The only triple guarantee brokerage in Alberta →</a>
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="header-right">
                     <div class="header-right-image">
-                        <img src="images/lady-holding-hammer.png" alt="">
+                        <img src="images/lady-holding-hammer-1.png" alt="">
                     </div>
                 </div>
             </header>
@@ -64,21 +74,21 @@
                                     <img src="/images/time-calender.png" alt="">
                                 </div>
                                 <div class="guarantee-info">We guide your selling time</div>
-                                <div class="guarantee-link"><a href="">Learn more →</a></div>
+                                <div class="guarantee-link"><a href="#" class="learn-more-link">Learn More →</a></div>
                             </div>
                             <div class="guarantee-card">
                                 <div class="guarantee-icon">
                                     <img src="/images/home-price.png" alt="">
                                 </div>
                                 <div class="guarantee-info">We guarantee your selling price</div>
-                                <div class="guarantee-link"><a href="">Learn more →</a></div>
+                                <div class="guarantee-link"><a href="#" class="learn-more-link">Learn More →</a></div>
                             </div>
                             <div class="guarantee-card">
                                 <div class="guarantee-icon">
                                     <img src="/images/home-profit.png" alt="">
                                 </div>
                                 <div class="guarantee-info">We guarantee your right to cancel it</div>
-                                <div class="guarantee-link"><a href="">Learn more →</a></div>
+                                <div class="guarantee-link"><a href="#" class="learn-more-link">Learn More →</a></div>
                             </div>
                         </div>
 
@@ -132,11 +142,12 @@ https://www.freepik.com/free-photo/african-american-technician-checks-maintenanc
                                 </article>
                             </div>
                         </section>
-                        <form id="guide-search-bar" action="#" method="post">
+                        <form class="guide-search-bar" action="#" method="post">
                             <div class="input-container">
+                                <i class="fa-solid fa-location-dot"></i>
                                 <input type="text" name="address" id="search-input" placeholder="Enter your address" required="" autocomplete="off">
                             </div>
-                            <button id="guide-search-btn">
+                            <button class="guide-search-btn">
                                 <i class="fas fa-magnifying-glass"></i>
                                 <span>Instant Evaluation</span>
                             </button>
@@ -167,6 +178,89 @@ https://www.freepik.com/free-photo/african-american-technician-checks-maintenanc
                     </article>
                 </section>
                 
+                <section id="about">
+                    <div class="about about-1">
+                        <div class="about-img">
+                            <img src="./images/excited-couple-raising-hands-happy-move-new-house.jpg" alt="">
+                        </div>
+                        <div class="about-text">
+                            <h2>Swift Sale</h2>
+                            <p>Skip showings! Choose a moving day that’s best for you. We pay 90% of current value PLUS 90% of any
+                                overage if we resell for more than appraised! All commissions + fees are built in. It’s the easiest
+                                way to sell!</p>
+                                <form class="guide-search-bar" action="#" method="post">
+                                    <div class="input-container">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <input type="text" name="address" id="search-input" placeholder="Enter your address" required="" autocomplete="off">
+                                    </div>
+                                    <button class="guide-search-btn">
+                                        <span>Get an Appraisal</span>
+                                        <i class="fa-solid fa-house-circle-check"></i>
+                                    </button>
+                                </form>
+                        </div>
+                    </div>
+                    <div class="about about-2">
+                        <div class="about-img">
+                            <img src="./images/pexels-mart-production-7415039.jpg" alt="">
+                        </div>
+                        <div class="about-text">
+                            <h2>List on the Local MLS</h2>
+                            <p>We don’t require you to list your home and tolerate showings, but you may choose (optional) to list
+                                on the local MLS to test for a higher price - for as long as you like. Activate a Swift Sale any
+                                time.</p>
+                            <div>
+                                <a href="#" class="learn-more-link">Start →</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="deals">
+                    <div class="header">
+                        <h2>We buy houses too!</h2>
+                        <p>Accept our offer and sell without showings. If you want, you can test the market with an MLS listing and
+                            activate a Swift Sale if/when you want - no extra fees.</p>
+                    </div>
+                    <div class="deals-container">
+                        <div class="deal deal-1">
+                            <div>
+                                <h3>Swift Sale </h3>
+                                <p>For those who want a certain sale, to skip public showings, chooe a moving date and more
+                                    convenient process. The easy way to sell your home.</p>
+                            </div>
+                            <ul>
+                                <li>We'll pay 90% of current value, PLUS 90% of any overage!</li>
+                                <li>Sell Without showing</li>
+                                <li>Avoid Double Moves</li>
+                                <li>Avoid Double Mortgages</li>
+                                <li>Buy Your next home confidently</li>
+                            </ul>
+                            <p> <i class="fa-solid fa-star color-gold"></i> We'll pay 90% of Market Value on the day you choose, PLUS 90% of any overage</p>
+                            <a href="#" class="learn-more-link">Learn More →</a>
+                        </div>
+                        <div class="deal deal-2">
+                            <div>
+                                <h3>List on the Local MLS </h3>
+                                <p>List with TAR like you're already sold! Receive in person professional representation.
+                                    Activate a Swift Sale at any time.</p>
+                            </div>
+                            <ul>
+                                <li>Local Expert Knowledge and Advice</li>
+                                <li>Marketing Power</li>
+                                <li>Free Photos and Measurements</li>
+                                <li>Free Showing-Schedule service</li>
+                                <li>Fallback to Swift Sale Cash Offer any time</li>
+                            </ul>
+                            <p> <i class="fa-solid fa-star color-gold"></i> Activate a Swift Sale at any time, you're in control.</p>
+                            <a href="#" class="learn-more-link">Learn More →</a>
+                        </div>
+            
+                    </div>
+                    <div class="deals-btn">
+                        <button class="estimates">Order an Appraisal</button>
+                    </div>
+                </section>
+
                 <section id="l_blog">
                     <div class="plan-2-s">
                         <h2>Plan to Succeed</h2>
@@ -186,7 +280,7 @@ https://www.freepik.com/free-photo/african-american-technician-checks-maintenanc
                                     we've built a
                                     better plan designed to guarantee your success and make the entire process
                                     stress-free!</p>
-                                <a href="#">Read More</a>
+                                <a href="#" class="learn-more-link">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -211,107 +305,13 @@ https://www.freepik.com/free-photo/african-american-technician-checks-maintenanc
                         </div>
                     </div>
                 </section>
-                <section id="faqs">
-                    <h1>Questions and Answers</h1>
-                    <div class="q-a-container" onclick="toggleAnswer(this);">
-                        <div class="q">
-                            <div class="q-text">How do I know that I’m getting a fair price from Trusted Advisers
-                                Realty?</div>
-                            <div class="q-icon"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="a">We've built the Swift Sale to pay 90% of current market value. Even if we re-sell
-                            the home for more than what was originally valued, you'll get a second payment for the full
-                            90% of that overage! A common misunderstanding about Trusted Advisers Realty is to think of
-                            us as 'house flippers' who buy low to sell high and keep all the profit. We don't make
-                            'low-ball' offers because we're not house flippers. Our business model is a fee for service.
-                            The service we provide is the certainty of a sale without the hassles of a listing and all
-                            the showings. The fee we charge is 10% of value, which includes our commissions, costs, and
-                            all other fees.</div>
-                    </div>
-
-                    <div class="q-a-container" onclick="toggleAnswer(this);">
-                        <div class="q">
-                            <div class="q-text">What if I disagree with the appraised value?</div>
-                            <div class="q-icon"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="a">Let us know. If you think something was missed, we'll review it with you and make
-                            sure that we understand your homes full value. We normally set the asking price higher, and
-                            often sell the homes we buy for more than what’s appraised. If this happens on the home you
-                            sell to Trusted Advisers Realty, you get 90% of the overage too.</div>
-                    </div>
-
-                    <div class="q-a-container" onclick="toggleAnswer(this);">
-                        <div class="q">
-                            <div class="q-text">Is it possible to get more than 90% of appraised value?</div>
-                            <div class="q-icon"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="a">Yes. Sometimes our homes receive competing offers from more than 1 buyer and the
-                            result may be a sale at more than the asking price, and more than the appraised value. If we
-                            can sell the home for more than the appraised value, you'll get a second payment for 90% of
-                            the overage too!</div>
-                    </div>
-
-                    <div class="q-a-container" onclick="toggleAnswer(this);">
-                        <div class="q">
-                            <div class="q-text">What is Trusted Advisers Realty?</div>
-                            <div class="q-icon"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="a">Trusted Advisers Realty is a licensed real estate brokerage, blended with
-                            finance, and technology. We apply our finances to make our customers' selling and buying
-                            process easier, and more profitable. Trusted Advisers Realty makes an offer to buy your home
-                            – unlike other real estate brokerages that only offer to ‘list’ your home on the local MLS,
-                            you can activate our offer to skip showings. If you want to test the market with an MLS
-                            listing before activating our offer, you can do that – you don’t pay anything to ‘list’ with
-                            Trusted Advisers Realty and only pay a discounted commission if/when you sell.</div>
-                    </div>
-
-                    <div class="q-a-container" onclick="toggleAnswer(this);">
-                        <div class="q">
-                            <div class="q-text">What's the catch?</div>
-                            <div class="q-icon"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="a">We get this question almost every day, actually. There's really no catch. When
-                            you want to sell, you want the process to be as easy as possible, and a fair selling price.
-                            We lead with an offer to buy your home! You can activate our offer for a moving day that
-                            works best for you. We pay 90% of appraised value PLUS 90% of any overage. The value is set
-                            by an independent appraisal. You can activate our offer and skip showings. You may also test
-                            the market for a higher sale price before activating our offer – if you choose.</div>
-                    </div>
-
-                    <div class="q-a-container" onclick="toggleAnswer(this);">
-                        <div class="q">
-                            <div class="q-text">What if I have more questions?</div>
-                            <div class="q-icon"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="a">Let’s set a time to discuss any questions you have. You can arrange a call for a
-                            day/time that works for you here. We’ll call you to review your questions.</div>
-                    </div>
-                    <div class="faq-btn-container">
-                        <button class="faq-btn">View All FAQs</button>
-                    </div>
-                </section>
+                <%- include('faqs') %>
                 <%- include('estimates') %>
 
             </main>
             <%- include('footer') %>
     </div>
-    <script>
-        /**
-         * 
-         * @param {HTMLElement} container 
-         */
-        function toggleAnswer(container) {
-            container.classList.toggle("open");
-            let icon = container.querySelector('i');
-            if (icon.classList.contains('fa-chevron-down')) {
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-right')
-            } else {
-                icon.classList.remove('fa-chevron-right');
-                icon.classList.add('fa-chevron-down')
-            }
-        }
-    </script>
+   
 
 </body>
 

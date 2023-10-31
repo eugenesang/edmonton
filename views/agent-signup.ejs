@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Signup</title>
-    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+<%- include('head') %>
 
 <body>
     <%- include('nav') %>
-        <header id="header">
-            <div class="header-container">
-                <div class="header-details">
-                    <h1>
-                        Edmonton Real Estate Experts Certified
-                    </h1>
-                    <div class="h-txt-container deal">
-                        <ul>
-                            <li>Opportunities for Realtors</li>
-                            <li>Advantages for your clients</li>
-                            <li>Offer your clients more/better options to sell without showings.</li>
-                        </ul>
-                        <button onclick="location.href='#registration'">Get Certified</button>
+        
+        <header>
+
+            <div class="header-left-container">
+                <div class="header-left">
+                    <div class="header-left-toptext">
+                        <h1> Trusted Advisers Realty </h1>
+                        <h1>Certified <i class="fa-solid fa-award" style="font-size: 2.67rem;"></i></h1>
                     </div>
+                    <div class="h-txt-container">
+                        <div class="h-txt-container deal">
+                            <ul>
+                                <li>Opportunities for Realtors</li>
+                                <li>Advantages for your clients</li>
+                                <li>Offer your clients more/better options to sell without showings.</li>
+                            </ul>
+                            <button onclick="location.href='#registration'" class="estimates">Get Certified</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-right-image">
+                    <img src="/images/lady-holding-hammer-1.png" alt="">
                 </div>
             </div>
         </header>
         <section id="guide">
-            <h1>Advantages</h1>
+            <h1 style="color: teal;">Advantages</h1>
             <div class="guide-container">
                 <article class="guide-card">
                     <div class="guide-img">
@@ -71,10 +73,10 @@
         <section id="registration">
             <div class="reg-header">
                 <div class="reg-img-container">
-                    <img src="/images/edmonton-certified-dark.svg" alt="">
+                    <img src="/images/trusted-advisers-dark.svg" alt="">
                 </div>
                 <div class="req-details">
-                    <p>Register to become a certified agent for Edmonton Real Estate Experts in your area and offer more
+                    <p>Register to become a certified agent for Trusted Advisers Realty in your area and offer more
                         options for your clients</p>
                 </div>
             </div>
@@ -162,6 +164,7 @@
                 </form>
             </div>
         </section>
+        <%- include('estimates') %>
         <%- include('footer') %>
 </body>
 <style>
@@ -210,16 +213,13 @@
     }
     
     .text-based-inputs {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
         width: 90%;
         margin: 10px auto;
     }
 
     .input-container {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
         margin: 5px;
     }
 
