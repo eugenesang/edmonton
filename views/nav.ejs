@@ -120,27 +120,31 @@
             position: fixed;
             top: 0;
             left: 0;
-            padding: 5px;
+            padding: 10px;
             z-index: 999;
         }
 
         nav .company-logo img {
-            height: 40px;
-            width: 40px;
+            height: 50px;
+            width: 50px;
         }
 
         .nav-strip {
             display: grid;
             grid-template-columns: 1fr auto;
-            background-color: whitesmoke;
+            background-color: rgba(245, 245, 245, 0.971);
             align-items: center;
             position: fixed;
             top: 0;
             right: 0;
             width: 100vw;
             z-index: 10;
+            padding: 15px 0px;
         }
 
+        .nav-strip.collapsed-nav{
+            background-color: whitesmoke;
+        }
         .nav-buttons {
             text-align: left;
             display: grid;
@@ -167,10 +171,10 @@
         }
 
         nav a.learn-more-link{
-            color: white;
+            color: #3177d8;
         }
         nav a.learn-more-link:after, nav a.learn-more-link:before{
-            border-bottom-color: white;
+            border-bottom-color: #3177d8;
         }
         .phone-link {
             list-style-type: none;
@@ -205,10 +209,8 @@
         }
 
         @media screen and (max-width: 768px) {
-
-            nav .nav-buttons button,
-            .phone-link a * {
-                font-size: 12px;
+            .phone-link {
+                display: none;
             }
         }
 
@@ -221,6 +223,7 @@
             color: white;
             text-decoration: none;
         }
+
 
         button.estimates {
 
@@ -300,8 +303,8 @@
 
         #menu {
             width: 100%;
-            height: calc(100vh - 50px);
-            margin-top: 50px;
+            height: calc(100vh - 80px);
+            margin-top: 80px;
             display: grid;
             grid-template-columns: 1fr auto;
             transition-duration: 400ms;
@@ -324,7 +327,7 @@
             display: grid;
             grid-template-rows: auto 1fr;
             height: 100%;
-            background-color: #3177d8;
+            background-color: whitesmoke;
         }
 
         .menu-content {
@@ -368,11 +371,11 @@
         }
 
         .menu-title:hover {
-            color: white;
+            color: #3177d8;
         }
 
         .menu-title.collapsed:hover {
-            color: pink;
+            color: rgb(132, 0, 198);
         }
 
         .level2-option {
@@ -386,7 +389,7 @@
         .level2-option:hover {
             text-decoration: underline;
             text-decoration-style: dotted;
-            color: #ffffff;
+            color: teal;
         }
 
         li.acc-nav {
@@ -413,12 +416,15 @@
             font-size: medium;
             margin: 5px;
             display: inline;
-            color: #c4ffff;
+            color: #3177d8;
             background-color: transparent;
-            border: 1px solid #c4ffff;
+            border: 1px solid #3177d8;
             min-width: 100px;
         }
-
+        button.login:hover{
+            color: white;
+            background-color: #3177d8;
+        }
         button.sign-up {
             font-family: "Nunito", serif;
             transition: ease 400ms;
@@ -427,16 +433,22 @@
             font-size: medium;
             margin: 5px;
             display: inline;
-            color: #3177d8;
-            background-color: #c4ffff;
-            border: 1px solid #c4ffff;
+            color: white;
+            background-color: teal;
+            border: 1px solid teal;
             min-width: 100px;
+        }
+
+        button.sign-up:hover{
+            background-color: transparent;
+            color: teal;
         }
     </style>
     <script>
         function closeNavOptions() {
             document.querySelector("#open-close-icon").classList.toggle('x-shape');
             document.querySelector("#menu").classList.toggle('hidden');
+            document.querySelector('.nav-strip').classList.toggle('collapsed-nav')
         }
 
         document.getElementById("open-close-icon").addEventListener("click", closeNavOptions);
