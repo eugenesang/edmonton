@@ -2,6 +2,7 @@
 <html lang="en">
 
 <%- include('head') %>
+<link rel="stylesheet" href="/styles/why-us-img.css">
 
     <body>
         <%- include('nav') %>
@@ -40,7 +41,7 @@
                 <div class="m-h-body">
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-1 marketing-xp">
+                            <div class="hiw-img" marketing-xp>
 
                             </div>
                         </div>
@@ -82,7 +83,7 @@
                     </div>
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-4" relentless-followup>
+                            <div class="hiw-img e-4" customer-followup>
 
                             </div>
                         </div>
@@ -98,7 +99,7 @@
                 <div class="m-h-body">
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-1" large-mailing>
+                            <div class="hiw-img e-1" mailing-list>
 
                             </div>
                         </div>
@@ -112,7 +113,7 @@
                     </div>
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-2" realtor-networking>
+                            <div class="hiw-img e-2" realtors-networking>
 
                             </div>
                         </div>
@@ -125,7 +126,7 @@
                     </div>
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-3" sellable-listings>
+                            <div class="hiw-img e-3" working-description>
 
                             </div>
                         </div>
@@ -139,7 +140,7 @@
                     </div>
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-4" swift-sale-fallback>
+                            <div class="hiw-img e-4" swift-sale>
 
                             </div>
                         </div>
@@ -155,7 +156,7 @@
                 <div class="m-h-body">
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-1" direct-mail>
+                            <div class="hiw-img e-1" emails-and-flyers>
 
                             </div>
                         </div>
@@ -167,7 +168,7 @@
                     </div>
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-2" free-staging>
+                            <div class="hiw-img e-2" interior-design>
 
                             </div>
                         </div>
@@ -192,7 +193,7 @@
                     </div>
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-4" co-marketing>
+                            <div class="hiw-img e-4" business-networking>
 
                             </div>
                         </div>
@@ -222,7 +223,7 @@
                     </div>
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-2" social-media-presence>
+                            <div class="hiw-img e-2" social-media-engagement>
 
                             </div>
                         </div>
@@ -249,7 +250,7 @@
                     </div>
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-4" referral-programs>
+                            <div class="hiw-img e-4" referral-program>
 
                             </div>
                         </div>
@@ -303,7 +304,7 @@
                     </div>
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-4" regular-posting>
+                            <div class="hiw-img e-4" regular-posts>
 
                             </div>
                         </div>
@@ -385,7 +386,7 @@
                     </div>
                     <div class="hiw">
                         <div class="hiw-left">
-                            <div class="hiw-img e-2" video-ads>
+                            <div class="hiw-img e-2" video-social-media>
 
                             </div>
                         </div>
@@ -628,8 +629,7 @@
         .hiw {
             display: grid;
             grid-template-rows: 1fr auto;
-            max-width: 90vw;
-            width: fit-content;
+            width: 90vw;
             margin: 25px auto;
             padding: 15px;
             background-color: #f2f7f6;
@@ -641,6 +641,8 @@
             background: url(/images/woman-celebrating-successful-swift-sale.jpg);
             aspect-ratio: 3/2;
             background-size: contain !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
             width: 300px;
             max-width: 90vw;
             margin: 5px auto;
@@ -665,6 +667,7 @@
         }
 
         .hiw-right {
+            width: 100%;
             max-width: 80vw;
             margin: 0px auto;
             padding: 10px;
