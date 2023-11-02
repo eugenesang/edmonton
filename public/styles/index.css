@@ -439,7 +439,7 @@ header h3.h-h3 {
 }
 
 .guide-card p {
-    font-size: medium;
+    font-size: 1.05rem;
 
 }
 
@@ -871,3 +871,13 @@ button.guide-search-btn {
 
 
 /*  */
+
+.hiw p{
+    color: rgb(99, 99, 99);
+    font-size: 1rem !important;
+}
+
+.hiw-left{
+    display: grid;
+    align-items: center;
+}
