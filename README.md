@@ -37,7 +37,19 @@ Before you begin, ensure you have met the following requirements:
 
     Open MySQL Workbench or your preferred MySQL client (XAMPP for our case).
     Create a new database (if not already created).
-    Update the ``.env`` file with the appropriate database credentials.
+    - Environment variables
+    1. Create a file named `.env`
+    2. In the file, add and/or update with appropriate values
+    ```env
+    DB_HOST= #i.e localhost
+    DB_USER= #mysql user i.e admin or root
+    DB_PASSWORD= #mysql password
+    DB_DATABASE= #mysql database name
+    SESSION_SECRET = # at least 16 character long alphanumeric string of characters
+    PORT = # i.e 2354
+    JWT_SECRET = # at least 16 character long alphanumeric string of characters
+    ```
+    > `#` is a comment in `.env` file, so remove them in your the file
 5. Check that everything is configured, including:
     - Database 
     - Modules (Project directory should include: node_modules folder and package-lock.json file)
