@@ -35,6 +35,14 @@
             <div id="menu" class="hidden">
                 <div class="menu-left"></div>
                 <div class="menu-right" data-scroll-section>
+                    <div>
+                        <button class="phone-link">
+                            <a href="tel:+18778504448">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>1-877-850-4448</span>
+                            </a>
+                        </button>
+                    </div>
                     <ul id="level1">
                         <li class="level1-option">
                             <div class="menu-title">
@@ -142,9 +150,10 @@
             padding: 15px 0px;
         }
 
-        .nav-strip.collapsed-nav{
+        .nav-strip.collapsed-nav {
             background-color: whitesmoke;
         }
+
         .nav-buttons {
             text-align: left;
             display: grid;
@@ -170,12 +179,15 @@
             }
         }
 
-        nav a.learn-more-link{
+        nav a.learn-more-link {
             color: #3177d8;
         }
-        nav a.learn-more-link:after, nav a.learn-more-link:before{
+
+        nav a.learn-more-link:after,
+        nav a.learn-more-link:before {
             border-bottom-color: #3177d8;
         }
+
         .phone-link {
             list-style-type: none;
             font-family: rubik;
@@ -188,6 +200,10 @@
             margin-right: 5px;
             display: inline-block;
             width: fit-content;
+        }
+
+        #menu .phone-link {
+            display: none;
         }
 
         .phone-link i {
@@ -211,6 +227,11 @@
         @media screen and (max-width: 768px) {
             .phone-link {
                 display: none;
+            }
+
+            #menu .phone-link {
+                display: block;
+                margin: 10px auto;
             }
         }
 
@@ -421,10 +442,12 @@
             border: 1px solid #3177d8;
             min-width: 100px;
         }
-        button.login:hover{
+
+        button.login:hover {
             color: white;
             background-color: #3177d8;
         }
+
         button.sign-up {
             font-family: "Nunito", serif;
             transition: ease 400ms;
@@ -439,7 +462,7 @@
             min-width: 100px;
         }
 
-        button.sign-up:hover{
+        button.sign-up:hover {
             background-color: transparent;
             color: teal;
         }

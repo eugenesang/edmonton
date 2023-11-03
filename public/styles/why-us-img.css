@@ -117,3 +117,39 @@ div.hiw-img[free-renovation] {
 div.hiw-img[tabletop-package] {
     background: url(/images/hiw/tabletop-package.jpg);
 }
+
+div.hiw-img[radio-tv-ads] {
+    background: url(/images/hiw/radio-tv-ads.png);
+}
+
+div.hiw-img[garage-sale] {
+    background: url(/images/hiw/garage-sale.jpg);
+}
+
+div.hiw-img[commission-sale] {
+    background: url(/images/hiw/commission-sale.jpg);
+}
+
+div.hiw-img[for-sale-sign] {
+    background: url(/images/hiw/for-sale-sign.jpg);
+}
+
+div.hiw-img[pay-per-click] {
+    background: url(/images/hiw/pay-per-click.webp);
+}
+
+div.hiw-img[online-ads] {
+    background: url(/images/hiw/online-ads.jpg);
+}
+
+div.hiw-img[overseas-marketing] {
+    background: url(/images/hiw/overseas-marketing.webp);
+}
+
+div.hiw-img[buyer-incentive-program] {
+    background: url(/images/hiw/buyer-incentive-program.jpg);
+}
+
+div.hiw-img[down-payment-program] {
+    background: url(/images/hiw/down-payment-program.png);
+}
