@@ -6,14 +6,14 @@
 
 
 :root {
-    --red: red;
-    --blue: blue;
+    --red: #C92129;
+    --blue: #4b93f7;
     --pink: rgb(255, 70, 101);
-    --btn-color: rgb(107, 109, 186);
+    --btn-color: #4b93f7;
     --orange: #fdca42;
     --box-shadow: 0 2px 5px 1px rgba(64, 60, 67, .16);
     --box-shadow1: 0 2px 5px 1px rgba(64, 60, 67, .16);
-    --text-color-1: #0053a1;
+    --text-color-1: #4b93f7;
     --dm: "Dm Serif Display";
 }
 
@@ -150,7 +150,7 @@ header h3 {
 header h1 {
     font-family: "Dm Serif Display", serif;
     font-weight: 700;
-    color: #ffb600;
+    color: var(--red);
     text-shadow: 2px 2px 0 #6c6a6a, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-size: 3.5rem;
     line-height: 3.8rem;
@@ -186,7 +186,7 @@ header h1 {
 
 
 header h3.h-h3 {
-    padding: 20px 0px;
+    padding: 10px 0px;
     text-align: center;
     font-family: nunito;
 }
@@ -305,7 +305,7 @@ header h3.h-h3 {
 }
 
 #saleGuarantee {
-    background-color: rgb(102, 103, 171);
+    background-color: #4b93f7;
     padding: 10px 0px;
 }
 

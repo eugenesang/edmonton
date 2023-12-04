@@ -22,7 +22,7 @@ app.use(session({
 app.use(checkLogin);
 
 app.get('/', (req, res)=>{
-    res.render('tar-index', {user: req.session.info? req.session.info: null})    
+    res.render('index', {user: req.session.info? req.session.info: null})    
 });
 app.get('/og', (req, res)=>{
     res.render('index', {user: req.session.info? req.session.info: null})
