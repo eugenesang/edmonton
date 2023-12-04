@@ -502,11 +502,11 @@ header h3.h-h3 {
 }
 
 .guide-search-bar input::placeholder {
-    color: rgb(210, 210, 210);
+    color: rgb(59, 59, 59);
 }
 
 .guide-search-bar.header-form input::placeholder {
-    color: rgb(58, 58, 58);
+    color: rgb(36, 36, 36);
 }
 
 button.guide-search-btn {
@@ -520,9 +520,9 @@ button.guide-search-btn {
     border-radius: 0px 25px 25px 0px;
     padding: 10px;
     cursor: pointer;
-    border-left: 1px solid rgb(168, 168, 168);
+    border-left: 1px solid var(--blue);
     color: white;
-    font-weight: bold;
+    background-color: var(--blue);
 }
 
 .guide-search-bar.header-form .guide-search-btn,
