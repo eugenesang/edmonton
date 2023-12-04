@@ -368,7 +368,6 @@ header h3.h-h3 {
 }
 
 .guarantee-link a {
-    color: azure;
     text-decoration: none;
     font-weight: bold;
     font-size: medium;
@@ -377,7 +376,6 @@ header h3.h-h3 {
 #saleGuarantee h3,
 #guide h1 {
     text-align: center;
-    color: white;
     padding: 20px 0px;
     font-size: 2rem;
 }
@@ -409,7 +407,7 @@ header h3.h-h3 {
 }
 
 .guide-container img {
-    width: 100%;
+    max-height: 250px;
     max-width: unset;
     border-radius: 10px 10px 0px 0px;
 }
@@ -429,14 +427,27 @@ header h3.h-h3 {
 
 #saleGuarantee .guide-card .guide-txt h3 {
     color: rgb(61, 61, 255);
-    font-family: var(--dm);
+    font-family: nunito;
     font-size: 28px;
-    text-align: left;
+    font-weight: 800;
+    text-align: center;
     padding: 5px 0px;
 }
 
 .guide-txt {
     padding: 10px;
+}
+
+.guide-txt li{
+    padding-left:20px ;
+}
+
+.guide-txt li::before {
+    display: inline-block;
+    content: "\2713";
+    margin-right: 8px;
+    color: var(--blue);
+    font-weight: 600;
 }
 
 .guide-card p {
@@ -473,7 +484,7 @@ header h3.h-h3 {
     width: 100%;
     outline: none;
     background: transparent;
-    color: white;
+    color: black;
 }
 
 .input-container {
@@ -638,7 +649,7 @@ button.guide-search-btn {
     font-size: 2rem;
     font-family: var(--dm);
     text-align: center;
-    color: teal;
+    color: var(--blue);
     padding: .5rem;
 }
 
@@ -806,7 +817,7 @@ button.guide-search-btn {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
         width: fit-content;
-        border: 1px dotted teal;
+        border: 1px dotted var(--blue);
         padding: 10px;
         margin: 1rem auto;
     }
