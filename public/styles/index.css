@@ -8,6 +8,7 @@
 :root {
     --red: #C92129;
     --blue: #4b93f7;
+    --light-blue: #c8ddfb;
     --pink: rgb(255, 70, 101);
     --btn-color: #4b93f7;
     --orange: #fdca42;
@@ -305,7 +306,7 @@ header h3.h-h3 {
 }
 
 #saleGuarantee {
-    background-color: #c8ddfb;
+    background-color: var(--light-blue);
     padding: 10px 0px;
 }
 
@@ -548,15 +549,13 @@ button.guide-search-btn {
 }
 
 .persuade-card {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    background-color: rgb(0, 164, 164);
     max-width: 90vw;
-    width: 600px;
+    width: 500px;
     padding: 10px;
     margin: 50px auto;
     cursor: pointer;
 }
+
 
 @media (max-width: 768px) {
     .card-right * {
@@ -581,18 +580,32 @@ button.guide-search-btn {
 
 .persuade-card img {
     max-width: 100%;
+    width: 150px;
+}
+
+#persuade .card-left{
+    text-align: center;
 }
 
 .persuade-card .card-left {
     display: grid;
     align-items: center;
 }
+.persuade-card h2, .orange-txt{
+    width: 100%;
+    text-align: center;
+}
 
-.persuade-card h2 {
-    color: white;
+.persuade-card h2, .persuade-card h2 a {
+    color: var(--blue);
     font-family: var(--dm);
     font-size: 2rem;
     line-height: 3rem;
+}
+
+.persuade-card h2 a{
+    color: darkblue;
+    text-decoration: none;
 }
 
 .orange-txt {
@@ -604,9 +617,11 @@ button.guide-search-btn {
     font-family: Arial;
 }
 
-.orange-txt h3 {
+.orange-txt a {
     font-weight: 700;
     font-size: 1.2rem;
+    color: var(--red);
+    text-decoration: none;
 }
 
 .orange-txt p {
@@ -677,6 +692,14 @@ button.guide-search-btn {
     outline: none;
 }
 
+h2.about-separator{
+    width: fit-content;
+    margin: 10px auto;
+    font-size: 2rem;
+    color: var(--red);
+    padding: 5px;
+}
+
 .about * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -725,7 +748,6 @@ button.guide-search-btn {
     width: 600px;
     margin: 10px auto;
     text-align: center;
-    font-weight: 600;
     text-align: center;
 }
 
@@ -827,58 +849,6 @@ button.guide-search-btn {
     }
 }
 
-
-
-.plan-2-s {
-    padding: 10px;
-    background: #edf3f2;
-    margin: 10px auto;
-    width: fit-content;
-    max-width: 90vw;
-}
-
-.plan-2-s h2 {
-    text-align: center;
-    font-weight: 600;
-    padding: 1rem;
-}
-
-.p-2-s .right {
-    width: fit-content;
-    margin: 1px auto;
-}
-
-.p-2-s .left {
-    padding: 10px;
-}
-
-.p-2-s .left p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 10px 0px;
-}
-
-@media screen and (min-width: 768px) {
-    .p-2-s {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        align-items: center;
-    }
-
-    .yt-testimonials {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-}
-
-.yt-testimonials {
-    width: fit-content;
-    margin: 10px auto;
-}
-
-.yt-testimony {
-    padding: .5rem;
-}
 
 
 

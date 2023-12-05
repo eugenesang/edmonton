@@ -43,6 +43,7 @@ app.get('/why-us', (req, res)=>{
 app.get('/sell-to-us', (req, res)=>{
     res.render("sell-to-us");
 })
+
 const port = process.env.PORT;
 app.listen(port,()=>{
     console.log(`http://127.0.0.1:${port}`)
