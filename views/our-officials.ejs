@@ -57,12 +57,12 @@
 
                                 <div class="text-center mt-3">
 
-                                    <h5 class="mt-2 mb-0">
+                                    <h5 class="mt-2 mb-0 tar-strong">
                                         <%= name %>
                                     </h5>
-                                    <span>
+                                    <strong>
                                         <%= role %>
-                                    </span>
+                                    </strong>
 
                                     <div class="px-4 mt-1">
                                         <p class="fonts">
@@ -105,6 +105,9 @@
 </body>
 
 <style>
+    body{
+        background-color: #eff7ff;
+    }
     p {
         font-size: normal !important;
     }
@@ -114,13 +117,21 @@
         height: 70vh;
     }
 
-    body {
-        background: #eee;
+    #header h1{
+        color: var(--red);
+        padding-top: 2rem;
+        font-family: var(--dm);
+        text-align: center;
+    }
+    
+    .tar-strong{
+        font-weight: bold;
+        font-size: 1.75rem;
+        padding: 10px;
     }
 
     .card {
         border: none;
-
         position: relative;
         overflow: hidden;
         border-radius: 8px;
@@ -163,6 +174,7 @@
     .fonts {
         font-size: 16px;
         font-family: nunito;
+        color: #2d2f32;
     }
 
     .social-list {
@@ -187,7 +199,7 @@
 
     .buttons button:nth-child(1):hover {
         border: 1px solid var(--blue) !important;
-        color: #fff;
+        color: rgb(236, 241, 255);
         height: 40px;
         background-color: var(--blue);
     }
