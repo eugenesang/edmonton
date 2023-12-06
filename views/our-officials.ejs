@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('head') %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trusted Advisers Realty</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <body>
-        <%- include('nav') %>
+    <script src="/script.js" defer></script>
+    <script src="/scripts/index.js" defer></script>
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+    <%- include('nav') %>
         <section id="header">
             <div class="header-container">
 
                 <div class="header-details">
-                    <h1>Edmonton Real Estate Experts Officials</h1>
+                    <h1>Trusted Advisers Realty officials</h1>
                     <div class="">
 
                         <div class="h-search-bar">
-                            <p>Edmonton Real Estate Expert is a new kind of real estate brokerage that offers solutions not available anywhere else. We use our own money to make your process easier, more profitable, and less risky! We’re a blend of real estate, finance, and technology brought together to meet your real estate needs in ways that are more customer friendly than the solutions available from traditional real estate brokerages.</p>
+                            <p>Edmonton Real Estate Expert is a new kind of real estate brokerage that offers
+                                solutions not available anywhere else. We use our own money to make your process
+                                easier, more profitable, and less risky! We’re a blend of real estate, finance, and
+                                technology brought together to meet your real estate needs in ways that are more
+                                customer friendly than the solutions available from traditional real estate
+                                brokerages.</p>
                         </div>
                     </div>
                 </div>
@@ -22,62 +43,161 @@
         </section>
         <section id="officials">
             <% officials.map(({name, image, description, role})=>{ %>
-                <div class="official">
-                    <div class="official-img">
-                        <img src="<%= image %>" alt="<%= name %>">
+                <div class="container mt-5">
+
+                    <div class="row d-flex justify-content-center">
+
+                        <div class="col-md-7">
+
+                            <div class="card p-3 py-4">
+
+                                <div class="text-center">
+                                    <img src="<%= image %>" width="100" class="rounded-circle">
+                                </div>
+
+                                <div class="text-center mt-3">
+
+                                    <h5 class="mt-2 mb-0">
+                                        <%= name %>
+                                    </h5>
+                                    <span>
+                                        <%= role %>
+                                    </span>
+
+                                    <div class="px-4 mt-1">
+                                        <p class="fonts">
+                                            <%= description %>
+                                        </p>
+
+                                    </div>
+
+                                    <ul class="social-list">
+                                        <li><i class="fa-brands fa-facebook"></i></li>
+                                        <li><i class="fa-brands fa-x-twitter"></i></li>
+                                        <li><i class="fa-brands fa-instagram"></i></li>
+                                        <li><i class="fa-brands fa-linkedin"></i></li>
+                                        <li><i class="fa-brands fa-google"></i></li>
+                                    </ul>
+
+                                    <div class="buttons">
+
+                                        <button class="btn btn-outline-primary px-4">Message</button>
+                                        <button class="btn btn-primary px-4 ms-3">Contact</button>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+
                     </div>
-                    <div class="description">
-                        <h2 class="name"><%= name %></h2>
-                        <h5><%= role %></h5>
-                        <p><%= description %></p>
-                    </div>
+
                 </div>
 
-            <% }) %>
+                <% }) %>
         </section>
         <%- include('footer') %>
-    </body>
+</body>
 
-    <style>
-        p {
-            font-size: normal !important;
-        }
+<style>
+    p {
+        font-size: normal !important;
+    }
 
-        #header {
-            background-image: url(/images/pexels-pixabay-164522.jpg);
-            height: 70vh;
-        }
-        #officials{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            width: fit-content;
-            margin: 10px auto;
-            justify-content: space-between;
-        }
+    #header {
+        background-image: url(/images/real-estate-vector-images-7.jpg);
+        height: 70vh;
+    }
 
-        .official{
-            border-radius: 10px;
-            width: 80vw;
-            max-width: 350px;
-            background-color: whitesmoke;
-            box-shadow: 1px 1px 3px 2px gray;
-            margin: 10px auto;
-        }
-        .official-img img{
-            border-radius: 10px 10px 0 0;
-            width: 100%;
-        }
+    body {
+        background: #eee;
+    }
 
-        .description   {
-            padding: 10px;
-        }
+    .card {
+        border: none;
 
-        .description h5{
-            font-weight: normal;
-            font-family: var(--dm);
-            font-size: normal;
-        }
-    </style>
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .card:before {
+
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background-color: #c1d2e3;
+        transform: scaleY(1);
+        transition: all 0.5s;
+        transform-origin: bottom
+    }
+
+    .card:after {
+
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background-color: var(--blue);
+        transform: scaleY(0);
+        transition: all 0.5s;
+        transform-origin: bottom
+    }
+
+    .card:hover::after {
+        transform: scaleY(1);
+    }
+
+
+    .fonts {
+        font-size: 16px;
+        font-family: nunito;
+    }
+
+    .social-list {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .social-list li {
+        padding: 10px;
+        color: var(--blue);
+        font-size: 19px;
+    }
+
+
+    .buttons button:nth-child(1) {
+        border: 1px solid var(--blue) !important;
+        color: var(--blue);
+        height: 40px;
+    }
+
+    .buttons button:nth-child(1):hover {
+        border: 1px solid var(--blue) !important;
+        color: #fff;
+        height: 40px;
+        background-color: var(--blue);
+    }
+
+    .buttons button:nth-child(2) {
+        border: 1px solid var(--blue) !important;
+        background-color: var(--blue);
+        color: #fff;
+        height: 40px;
+    }
+</style>
 
 </html>

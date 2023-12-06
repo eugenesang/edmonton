@@ -100,7 +100,7 @@ button:hover{
     font-family: "Abel";
     font-size: 3.5rem; /* Adjust the font size as needed */
     font-weight: 800;
-    color: teal; /* Inner color */
+    color: var(--blue); /* Inner color */
     text-shadow: 1px 2px rgb(84, 84, 84), -2px -2px rgb(0, 83, 83);
     cursor: pointer;
     text-align: left;
@@ -163,11 +163,11 @@ button:hover{
 }
 
 #search-strip::-webkit-scrollbar-thumb{
-    background-color: teal;
+    background-color: var(--blue);
     border-radius: 5px;
 }
 #search-strip h3{
-    color: teal;
+    color: var(--blue);
     font-weight: 600;
     font-size: 1rem;
     background-color: rgba(255, 255, 255, 0.1);
@@ -185,12 +185,12 @@ button:hover{
 }
 
 .s-s-btns button:nth-of-type(1){
-    background-color: teal;
+    background-color: var(--blue);
     color: white;
 }
 .s-s-btns button:nth-of-type(2){
     background-color: white;
-    color: teal;
+    color: var(--blue);
 }
 .s-s-btns button{
     border: none;
@@ -328,7 +328,7 @@ button:hover{
 .about h2{
     font-weight: 600;
     text-align: center;
-    color: teal;
+    color: var(--blue);
     padding: .5rem;
 }
 .about-img{
@@ -450,7 +450,7 @@ button:hover{
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
         width: fit-content;
-        border: 1px dotted teal;
+        border: 1px dotted var(--blue);
         padding: 10px;
         margin: 1rem auto;
     }
@@ -542,7 +542,7 @@ button:hover{
 }
 
 .q-a-container.open{
-    border-color: teal;
+    border-color: var(--blue);
     padding: 10px;
 }
 .q-a-container.open .q *{
@@ -557,7 +557,7 @@ button:hover{
 .faq-btn{
     background: white;
     border-color: rgba(0, 128, 128, 0.397);
-    color: teal;
+    color: var(--blue);
     margin: 1rem auto;
 }
 
