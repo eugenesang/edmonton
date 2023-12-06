@@ -21,6 +21,12 @@ app.use(session({
 }));
 app.use(checkLogin);
 
+app.use('/home-valuation', require('./routes/homeValuation'));
+
+app.use('/account', require('./routes/account'));
+
+app.use('/agent', require('./routes/agent'));
+
 app.get('/', (req, res)=>{
     res.render('index', {user: req.session.info? req.session.info: null})    
 });
@@ -33,9 +39,7 @@ app.get('/swift-sale', (req, res)=>{
 app.get('/local-mls', (req, res)=>{
     res.render('local-mls', {user: req.session.info? req.session.info: null})
 })
-app.use('/account', require('./routes/account'));
 
-app.use('/agent', require('./routes/agent'));
 
 app.get('/why-us', (req, res)=>{
     res.render('why-us');
