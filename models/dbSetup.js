@@ -105,11 +105,30 @@ function createAgentsTable() {
   });
 }
 
+function createValuationTable() {
+  const createTableQuery = `
+    CREATE TABLE IF NOT EXISTS valuation (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      data TEXT,
+      createdAt VARCHAR(20),
+      done TEXT
+    )
+  `;
+
+  connection.query(createTableQuery, (err, results) => {
+    if (err) {
+      console.error('Error creating agents table:', err);
+    } else {
+      console.log(results);
+    }
+  });
+}
 
 function setupDatabase() {
   createAccountsTable();
   createAgentsTable();
   createHousesTable();
+  createValuationTable();
 }
 
 module.exports = setupDatabase;

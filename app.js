@@ -52,3 +52,7 @@ const port = process.env.PORT;
 app.listen(port,()=>{
     console.log(`http://127.0.0.1:${port}`)
 } );
+
+app.use((req, res)=>{
+    res.render('404')
+})
