@@ -27,6 +27,10 @@ app.use('/account', require('./routes/account'));
 
 app.use('/agent', require('./routes/agent'));
 
+app.use('/cities', require('./routes/cities'))
+
+app.use('/worth', require('./routes/worth'))
+
 app.get('/', (req, res)=>{
     res.render('index', {user: req.session.info? req.session.info: null})    
 });
