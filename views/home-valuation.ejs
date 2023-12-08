@@ -1,985 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('head') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Valuation - Trusted Advisers Realty</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="/scripts/index.js" defer></script>
-    <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
-    <script>
-        (function () {
-            const locomotiveScroll = new LocomotiveScroll();
-        })();
-    </script>
-    <meta data-react-helmet="true"
-        content="Trusted Advisers Realty is a real estate company based in Edmonton, Alberta. We offer expert advice and guidance to help you find your dream home with 100% confidence"
-        name="description">
-    <meta data-react-helmet="true" content="Trusted Advisers Realty, the triple guarantee brokerage in Alberta"
-        property="og:title">
-    <meta data-react-helmet="true"
-        content="Trusted Advisers Realty is a real estate company based in Edmonton, Alberta. We offer expert advice and guidance to help you find your dream home with 100% confidence."
-        property="og:description">
-    <meta data-react-helmet="true" content="/images/icon.svg" property="og:image">
-    <meta data-react-helmet="true" content="summary_large_image" name="twitter:card">
-    <meta data-react-helmet="true" content="/images/tar logo-bodered.png" name="twitter:image">
-    <link data-react-helmet="true" href="https://emonton.kvresident/" rel="canonical">
-    <link data-react-helmet="true" href="/imges/icon.svg" x="" y="" height="" width="" />
-    <link data-react-helmet="true" href="https://edmonton.kvresident.com" rel="preconnect">
-    <link data-react-helmet="true" href="/favicon.ico" rel="icon" sizes="any">
-    <link data-react-helmet="true" href="favicon.svg" rel="icon" type="image/svg+xml">
-    <link data-react-helmet="true" href="/apple-touch-icon-192x192.png" rel="apple-touch-icon" sizes="192x192">
-    <link data-react-helmet="true" href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-    <link data-react-helmet="true" href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-    <link data-react-helmet="true" href="/site.webmanifest" rel="manifest">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
-    
-
-
-</head>
-
-<body>
-    <%- include("nav") %>
-        <section id="valuation-content">
-            <!--[if lt IE 9]><script src="https://cdn03.jotfor.ms/js/vendor/flashcanvas.js?3.3.48690" type="text/javascript"></script><![endif]-->
-<script src="https://cdn01.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.48690" type="text/javascript"></script>
-<script src="https://cdn02.jotfor.ms/js/vendor/jSignature.min.noconflict.js?3.3.48690" type="text/javascript"></script>
-<script src="https://cdn03.jotfor.ms/js/vendor/jotform.signaturepad.js?3.3.48690" type="text/javascript"></script>
-<script src="https://cdn01.jotfor.ms/static/prototype.forms.js?3.3.48690" type="text/javascript"></script>
-<script src="https://cdn02.jotfor.ms/static/jotform.forms.js?3.3.48690" type="text/javascript"></script>
-<script defer src="https://cdn03.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.48690" type="text/javascript"></script>
-<script defer src="https://cdn01.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.48690" type="text/javascript"></script>
-<script defer src="https://cdn02.jotfor.ms//js/punycode-1.4.1.min.js"></script>
-<script src="https://cdn03.jotfor.ms/js/stripeSCA.js?v=3.3.48690" type="text/javascript"></script>
-<script src="https://cdn01.jotfor.ms/js/payments/validategateways.js?v=3.3.48690" type="text/javascript"></script>
-<script src="https://cdn01.jotfor.ms/s/umd/c86ed4d446a/for-sign-form-integration.js?v=3.3.48690" type="text/javascript" defer></script>
-<script type="text/javascript">	JotForm.newDefaultTheme = true;
-	JotForm.extendsNewTheme = false;
-	JotForm.singleProduct = false;
-	JotForm.newPaymentUIForNewCreatedForms = true;
-	JotForm.texts = {"confirmEmail":"E-mail does not match","pleaseWait":"Please wait...","validateEmail":"You need to validate this e-mail","confirmClearForm":"Are you sure you want to clear the form","lessThan":"Your score should be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","required":"This field is required.","requireOne":"At least one field required.","requireEveryRow":"Every row is required.","requireEveryCell":"Every cell is required.","email":"Enter a valid e-mail address","alphabetic":"This field can only contain letters","numeric":"This field can only contain numeric values","alphanumeric":"This field can only contain letters and numbers.","cyrillic":"This field can only contain cyrillic characters","url":"This field can only contain a valid URL","currency":"This field can only contain currency values.","fillMask":"Field value must fill mask.","uploadExtensions":"You can only upload following files:","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","gradingScoreError":"Score total should only be less than or equal to","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","maxDigitsError":"The maximum digits allowed is","minCharactersError":"The number of characters should not be less than the minimum value:","maxCharactersError":"The number of characters should not be more than the maximum value:","freeEmailError":"Free email accounts are not allowed","minSelectionsError":"The minimum required number of selections is ","maxSelectionsError":"The maximum number of selections allowed is ","pastDatesDisallowed":"Date must not be in the past.","dateLimited":"This date is unavailable.","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","ageVerificationError":"You must be older than {minAge} years old to submit this form.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","chooseAFile_infoMessage":"Choose a file","maxFileSize_infoMessage":"Max. file size","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","ccInvalidNumber":"Credit Card Number is invalid.","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingProduct":"Please select at least one product.","ccMissingDonation":"Please enter numeric values for donation amount.","disallowDecimals":"Please enter a whole number.","restrictedDomain":"This domain is not allowed","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","requiredLegend":"All fields marked with * are required and must be filled.","geoPermissionTitle":"Permission Denied","geoPermissionDesc":"Check your browser's privacy settings.","geoNotAvailableTitle":"Position Unavailable","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoTimeoutTitle":"Timeout","geoTimeoutDesc":"Please check your internet connection and try again.","selectedTime":"Selected Time","formerSelectedTime":"Former Time","cancelAppointment":"Cancel Appointment","cancelSelection":"Cancel Selection","noSlotsAvailable":"No slots available","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","multipleError":"There are {count} errors on this page. Please correct them before moving on.","oneError":"There is {count} error on this page. Please correct it before moving on.","doneMessage":"Well done! All errors are fixed.","doneButton":"Done","reviewSubmitText":"Review and Submit","nextButtonText":"Next","prevButtonText":"Previous","seeErrorsButton":"See Errors","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","soldOut":"Sold Out","justSoldOut":"Just Sold Out","selectionSoldOut":"Selection Sold Out","subProductItemsLeft":"({count} items left)","startButtonText":"START","submitButtonText":"Submit","submissionLimit":"Sorry! Only one entry is allowed. Multiple submissions are disabled for this form.","reviewBackText":"Back to Form","seeAllText":"See All","progressMiddleText":"of","fieldError":"field has an error.","error":"Error"};
-	JotForm.newPaymentUI = true;
-	JotForm.isLaterCharge = "immediately";
-	JotForm.useJotformSign = "Yes";
-	JotForm.replaceTagTest = true;
-	JotForm.clearFieldOnHide="disable";
-	JotForm.submitError="jumpToFirstError";
-	window.addEventListener('DOMContentLoaded',function(){window.brandingFooter.init({"formID":233393496409567,"campaign":"powered_by_jotform_le","isCardForm":false,"isLegacyForm":true})});	JotForm.isFullSource = true;
-
-	JotForm.init(function(){
-	/*INIT-START*/
-if (window.JotForm && JotForm.accessible) $('input_19').setAttribute('tabindex',0);
-if (window.JotForm && JotForm.accessible) $('input_20').setAttribute('tabindex',0);
-      JotForm.setPhoneMaskingValidator( 'input_4_full', '\u0028\u0023\u0023\u0023\u0029 \u0023\u0023\u0023\u002d\u0023\u0023\u0023\u0023' );
-
- JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
- if (!JotForm.calenderViewMonths) JotForm.calenderViewMonths = {};  JotForm.calenderViewMonths[40] = ["January","February","March","April","May","June","July","August","September","October","November","December"];
- if (!JotForm.calenderViewDays) JotForm.calenderViewDays = {};  JotForm.calenderViewDays[40] = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
- JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
- JotForm.calendarOther = {"today":"Today"};
- var languageOptions = document.querySelectorAll('#langList li'); 
- for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
-   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("40", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":false},"future":true,"past":false,"custom":false,"ranges":false,"start":"","end":"","countSelectedDaysOnly":false}); }, 0); });
- } 
- JotForm.onTranslationsFetch(function() { JotForm.setCalendar("40", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":false},"future":true,"past":false,"custom":false,"ranges":false,"start":"","end":"","countSelectedDaysOnly":false}); });
-if (window.JotForm && JotForm.accessible) $('input_29').setAttribute('tabindex',0);
-      JotForm.setStripeSettings('', 'none', 'none', '', 'none', '0');
-      JotForm.alterTexts(undefined);
-      JotForm.alterTexts({"couponApply":"Apply","couponBlank":"Please enter a coupon.","couponChange":"","couponEnter":"Enter coupon","couponExpired":"Coupon is expired. Please try another one.","couponInvalid":"Coupon is invalid.","couponValid":"Coupon is valid.","productListAllText":"All","productListCategoriesText":"Categories:","productListClearSort":"Clear Sort","productListNameAZ":"Name: A to Z","productListNameZA":"Name: Z to A","productListPriceHighest":"Price: High to Low","productListPriceLowest":"Price: Low to High","productListSearchText":"Search","productListSortBy":"Sort By","shippingShipping":"Shipping","taxTax":"Tax","totalSubtotal":"Subtotal","totalTotal":"Total"}, true);
-	/*INIT-END*/
-	});
-
-   setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"A selling plan to Guarantee your success!","type":"control_head"},{"name":"submit2","qid":"2","text":"SUBMIT","type":"control_button"},null,{"name":"phoneNumber","qid":"4","text":"Phone Number","type":"control_phone"},{"name":"emailAddress","qid":"5","subLabel":"example@example.com","text":"Email Address","type":"control_email"},null,null,null,null,null,null,null,null,null,{"name":"input15","qid":"15","text":"We’ll send you the valuation along with our offer to buy your home. You can activate our offer to sell without listing or showing your home. You even choose the closing day (within 45 days) so you can move at your convenience.\r\nBefore you activate our offer, you may also ‘list’ your Alberta home with Trusted Advisers Realty. Saskatchewan and Manitoba sellers can list with any of our preferred referral partner Realtors. Listing on MLS, and having showings is optional when you work with Trusted Advisers Realty. You can list your home at an asking price you choose - for as long as it takes to sell; or until you decide to activate our offer.\r\nOrder your valuation! Before you do anything, get your home professional (independently) valuated, and consider our offer. We offer up to 92% of the current valuated value. We pay more for higher priced homes. Get an valuation with our offer, then choose how you want to sell. Our offer can be activated at any time. Your home sale is guaranteed when you work with Trusted Advisers Realty – unlike any other Realtor.\r\nPlease complete the form below to begin the process.","type":"control_text"},null,{"description":"","name":"typeOf","qid":"17","subLabel":"","text":"Type of property","type":"control_dropdown"},{"description":"","name":"typeA","qid":"18","subLabel":"","text":"Province","type":"control_dropdown"},{"description":"","name":"typeA19","qid":"19","subLabel":"","text":"Customer Name","type":"control_textbox"},{"description":"","name":"propertyAddress","qid":"20","subLabel":"","text":"Property address","type":"control_textbox"},{"description":"","name":"areYou","qid":"21","text":"Are you already listed with another agent?","type":"control_radio"},null,null,{"description":"","name":"propertyValuation","qid":"24","text":"Property valuation cost","type":"control_radio"},{"description":"","name":"signature","qid":"25","subLabel":"","text":"Signature","type":"control_signature"},null,null,null,{"description":"","name":"whoReferred","qid":"29","subLabel":"Name of Referrer ","text":"Who referred you?","type":"control_textbox"},null,null,null,{"description":"","name":"appraisalFee","qid":"33","text":"Appraisal fee","type":"control_stripe"},{"description":"","name":"creditCard","qid":"34","text":"Credit Card Billing Address","type":"control_address"},{"name":"activateOur","qid":"35","text":"Activate our offer any time.","type":"control_head"},{"name":"trustedAdvisers","qid":"36","text":"Trusted Advisers Realty is not a ‘low-ball’ buyer. ","type":"control_head"},{"name":"chooseAny","qid":"37","text":"Choose any closing date within 45 days. ","type":"control_head"},{"name":"referralDisclosure","qid":"38","text":"Referral Disclosure.","type":"control_head"},{"description":"","name":"pleaseVerify","qid":"39","text":"Please verify that you are human","type":"control_captcha"},{"description":"","name":"whenShould","qid":"40","text":"When should the valuation take place?","type":"control_datetime"}]);}, 20); 
-</script>
-<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/form-common.css?v=18895d6
-"/>
-<style type="text/css">@media print{*{-webkit-print-color-adjust: exact !important;color-adjust: exact !important;}.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
-<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.48690"/>
-<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_styles.css?3.3.48690" />
-<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.48690" />
-<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/stylebuilder/donationBox.css?v=3.3.48690">
-<style type="text/css" id="form-designer-style">
-    /* Injected CSS Code */
-
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
-.form-all {
-  font-family: "Inter", sans-serif;
-}
-.main .jotform-form {
-  width: 100%;
-  padding: 0 3%;
-}
-.form-all {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 752px;
-}
-.form-line-active {
-  background-color: #f1f5ff;
-}
-.form-all {
-  font-size: 16px;
-}
-li.form-line {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-.form-line {
-  padding: 12px 10px;
-}
-.form-all .form-textbox:not(#productSearch-input),
-.form-all .form-radio-other-input,
-.form-all .form-checkbox-other-input,
-.form-all .form-captcha input,
-.form-all .form-spinner input,
-.form-all .form-pagebreak-back,
-.form-all .form-pagebreak-next,
-.form-all .qq-upload-button,
-.form-all .signature-wrapper,
-.form-all .form-error-message {
-  border-radius: 0px;
-}
-.form-all .form-textarea {
-  border-radius: 0px;
-}
-.form-all .form-submit-button,
-.form-all .form-submit-reset,
-.form-all .form-submit-print {
-  border-radius: 6px;
-}
-.form-all .form-sub-label {
-  margin-left: 3px;
-}
-.form-section {
-  padding: 0px 38px;
-}
-.form-textbox,
-.form-textarea,
-.form-radio-other-input,
-.form-checkbox-other-input,
-.form-captcha input,
-.form-spinner input {
-  background-color: #ffffff;
-}
-.form-label {
-  font-family: "Inter", sans-serif;
-}
-.form-line-column {
-  width: calc(50% - 8px);
-}
-.form-checkbox-item label,
-.form-checkbox-item span,
-.form-radio-item label,
-.form-radio-item span {
-  color: #1a1a1a;
-}
-.form-radio-item,
-.form-checkbox-item {
-  padding-bottom: 0px !important;
-}
-.form-radio-item:last-child,
-.form-checkbox-item:last-child {
-  padding-bottom: 0;
-}
-.form-single-column .form-checkbox-item,
-.form-single-column .form-radio-item {
-  width: 100%;
-}
-.form-checkbox-item .editor-container div,
-.form-radio-item .editor-container div {
-  position: relative;
-}
-.form-checkbox-item .editor-container div:before,
-.form-radio-item .editor-container div:before {
-  display: inline-block;
-  vertical-align: middle;
-  left: 0;
-  width: 20px;
-  height: 20px;
-}
-.form-radio-item:not(#foo),
-.form-checkbox-item:not(#foo) {
-  position: relative;
-}
-.form-radio-item:not(#foo) .form-radio + span:before,
-.form-checkbox-item:not(#foo) .form-radio + span:before,
-.form-radio-item:not(#foo) .form-radio + span:after,
-.form-checkbox-item:not(#foo) .form-radio + span:after,
-.form-radio-item:not(#foo) .form-radio:checked + span div:after,
-.form-checkbox-item:not(#foo) .form-radio:checked + span div:after,
-.form-radio-item:not(#foo) .form-checkbox + span:before,
-.form-checkbox-item:not(#foo) .form-checkbox + span:before,
-.form-radio-item:not(#foo) .form-checkbox + span:after,
-.form-checkbox-item:not(#foo) .form-checkbox + span:after,
-.form-radio-item:not(#foo) .form-checkbox:checked + span div:after,
-.form-checkbox-item:not(#foo) .form-checkbox:checked + span div:after {
-  display: none;
-}
-.form-radio-item:not(#foo) .form-radio + label:after,
-.form-checkbox-item:not(#foo) .form-radio + label:after,
-.form-radio-item:not(#foo) .form-radio + span:after,
-.form-checkbox-item:not(#foo) .form-radio + span:after,
-.form-radio-item:not(#foo) .form-checkbox + label:after,
-.form-checkbox-item:not(#foo) .form-checkbox + label:after,
-.form-radio-item:not(#foo) .form-checkbox + span:after,
-.form-checkbox-item:not(#foo) .form-checkbox + span:after {
-  opacity: 1;
-  transform: scale(1);
-}
-.form-radio-item:not(#foo) label:after,
-.form-checkbox-item:not(#foo) label:after {
-  background-color: #ffffff;
-}
-.form-radio-item:not(#foo) .form-checkbox + label,
-.form-checkbox-item:not(#foo) .form-checkbox + label,
-.form-radio-item:not(#foo) .form-checkbox + span,
-.form-checkbox-item:not(#foo) .form-checkbox + span,
-.form-radio-item:not(#foo) .form-radio + label,
-.form-checkbox-item:not(#foo) .form-radio + label,
-.form-radio-item:not(#foo) .form-radio + span,
-.form-checkbox-item:not(#foo) .form-radio + span {
-  padding-left: 50px;
-}
-.form-radio-item:not(#foo) label,
-.form-checkbox-item:not(#foo) label {
-  float: left;
-}
-.form-radio-item:not(#foo) label:before,
-.form-checkbox-item:not(#foo) label:before,
-.form-radio-item:not(#foo) .editor-container div:before,
-.form-checkbox-item:not(#foo) .editor-container div:before {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  vertical-align: baseline;
-  border-radius: 12px;
-  top: 0;
-  left: 4px;
-  width: 36px;
-  height: 22px;
-  cursor: pointer;
-  background: #C3CAD8;
-}
-.form-radio-item:not(#foo) label:after,
-.form-checkbox-item:not(#foo) label:after,
-.form-radio-item:not(#foo) .editor-container div:after,
-.form-checkbox-item:not(#foo) .editor-container div:after {
-  content: '';
-  position: absolute;
-  z-index: 10;
-  display: inline-block;
-  top: 3px;
-  left: 8px;
-  width: 15px;
-  height: 15px;
-  border-radius: 12px;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -ms-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease;
-  -moz-transition-timing-function: ease;
-  -ms-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  transition-timing-function: ease;
-}
-.form-radio-item:not(#foo) input:checked + label:before,
-.form-checkbox-item:not(#foo) input:checked + label:before {
-  background: #487bff;
-}
-.form-radio-item:not(#foo) input:checked + label:after,
-.form-checkbox-item:not(#foo) input:checked + label:after {
-  left: 20px;
-}
-.submit-button {
-  font-size: 16px;
-  font-weight: normal;
-  font-family: "Inter", sans-serif;
-  border: none;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #3d9ae2;
-}
-.submit-button {
-  min-width: 180px;
-}
-.form-submit-button:not(.form-sacl-button) {
-  color: #e8f6fb;
-  background: #4c72fb;
-  box-shadow: none;
-  text-shadow: none;
-}
-.form-all .form-pagebreak-back,
-.form-all .form-pagebreak-next {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-}
-.form-all .form-pagebreak-back,
-.form-all .form-pagebreak-next {
-  min-width: 128px;
-}
-li[data-type="control_image"] div {
-  text-align: left;
-}
-li[data-type="control_image"] img {
-  border: none;
-  border-width: 0px !important;
-  border-style: solid !important;
-  border-color: false !important;
-}
-.supernova {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center top;
-  background-repeat: repeat;
-}
-.supernova {
-  background-image: none;
-}
-#stage {
-  background-image: none;
-}
-/* | */
-.form-all {
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center top;
-  background-repeat: repeat;
-}
-.form-header-group {
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center top;
-}
-.header-large h1.form-header {
-  font-size: 2em;
-}
-.header-large h2.form-header {
-  font-size: 1.5em;
-}
-.header-large h3.form-header {
-  font-size: 1.17em;
-}
-.header-large h1 + .form-subHeader {
-  font-size: 1em;
-}
-.header-large h2 + .form-subHeader {
-  font-size: .875em;
-}
-.header-large h3 + .form-subHeader {
-  font-size: .75em;
-}
-.header-default h1.form-header {
-  font-size: 2em;
-}
-.header-default h2.form-header {
-  font-size: 1.5em;
-}
-.header-default h3.form-header {
-  font-size: 1.17em;
-}
-.header-default h1 + .form-subHeader {
-  font-size: 1em;
-}
-.header-default h2 + .form-subHeader {
-  font-size: .875em;
-}
-.header-default h3 + .form-subHeader {
-  font-size: .75em;
-}
-.header-small h1.form-header {
-  font-size: 2em;
-}
-.header-small h2.form-header {
-  font-size: 1.5em;
-}
-.header-small h3.form-header {
-  font-size: 1.17em;
-}
-.header-small h1 + .form-subHeader {
-  font-size: 1em;
-}
-.header-small h2 + .form-subHeader {
-  font-size: .875em;
-}
-.header-small h3 + .form-subHeader {
-  font-size: .75em;
-}
-.form-header-group {
-  text-align: left;
-}
-.form-header-group {
-  font-family: "Inter", sans-serif;
-}
-div.form-header-group.header-large,
-div.form-header-group.hasImage {
-  margin: 0px -38px;
-}
-div.form-header-group.header-large,
-div.form-header-group.hasImage {
-  padding: 40px 52px;
-}
-.form-header-group .form-header,
-.form-header-group .form-subHeader {
-  color: 0;
-}
-.form-line-error {
-  overflow: hidden;
-  -webkit-transition-property: none;
-  -moz-transition-property: none;
-  -ms-transition-property: none;
-  -o-transition-property: none;
-  transition-property: none;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -ms-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
-  -moz-transition-timing-function: ease;
-  -ms-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  transition-timing-function: ease;
-  background-color: #fff4f4;
-}
-.form-line-error .form-error-message {
-  background-color: #f23a3c;
-  clear: both;
-  float: none;
-}
-.form-line-error .form-error-message .form-error-arrow {
-  border-bottom-color: #f23a3c;
-}
-.form-line-error input:not(#coupon-input),
-.form-line-error textarea,
-.form-line-error .form-validation-error {
-  border: 1px solid #f23a3c;
-  box-shadow: 0 0 3px #f23a3c;
-}
-.supernova {
-  background-color: #ffffff;
-  background-color: #4c72fb;
-}
-.supernova body {
-  background-color: transparent;
-}
-.supernova .form-all,
-.form-all {
-  background-color: #ffffff;
-}
-.form-textbox,
-.form-textarea,
-.form-radio-other-input,
-.form-checkbox-other-input,
-.form-captcha input,
-.form-spinner input {
-  background-color: #ffffff;
-}
-.form-matrix-table tr {
-  border-color: #e6e6e6;
-}
-.form-matrix-table tr:nth-child(2n) {
-  background-color: #f2f2f2;
-}
-.form-all {
-  color: #000000;
-}
-.form-label-top,
-.form-label-left,
-.form-label-right,
-.form-html {
-  color: #000000;
-}
-.form-line-error {
-  overflow: hidden;
-  -webkit-transition-property: none;
-  -moz-transition-property: none;
-  -ms-transition-property: none;
-  -o-transition-property: none;
-  transition-property: none;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -ms-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
-  -moz-transition-timing-function: ease;
-  -ms-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  transition-timing-function: ease;
-  background-color: #fff4f4;
-}
-.form-header-group .form-header,
-.form-header-group .form-subHeader {
-  color: 0;
-}
-
-/*PREFERENCES STYLE*/
-    .form-all {
-      font-family: Inter, sans-serif;
-    }
-    .form-all .qq-upload-button,
-    .form-all .form-submit-button,
-    .form-all .form-submit-reset,
-    .form-all .form-submit-print {
-      font-family: Inter, sans-serif;
-    }
-    .form-all .form-pagebreak-back-container,
-    .form-all .form-pagebreak-next-container {
-      font-family: Inter, sans-serif;
-    }
-    .form-header-group {
-      font-family: Inter, sans-serif;
-    }
-    .form-label {
-      font-family: Inter, sans-serif;
-    }
-  
-    .form-label.form-label-auto {
-      
-    display: block;
-    float: none;
-    text-align: left;
-    width: 100%;
-  
-    }
-  
-    .form-line {
-      margin-top: 12px;
-      margin-bottom: 12px;
-    }
-  
-    .form-all {
-      max-width: 752px;
-      width: 100%;
-    }
-  
-    .form-label.form-label-left,
-    .form-label.form-label-right,
-    .form-label.form-label-left.form-label-auto,
-    .form-label.form-label-right.form-label-auto {
-      width: 230px;
-    }
-  
-    .form-all {
-      font-size: 16px
-    }
-    .form-all .qq-upload-button,
-    .form-all .qq-upload-button,
-    .form-all .form-submit-button,
-    .form-all .form-submit-reset,
-    .form-all .form-submit-print {
-      font-size: 16px
-    }
-    .form-all .form-pagebreak-back-container,
-    .form-all .form-pagebreak-next-container {
-      font-size: 16px
-    }
-  
-    .supernova .form-all, .form-all {
-      background-color: #fff;
-    }
-  
-    .form-all {
-      color: #000000;
-    }
-    .form-header-group .form-header {
-      color: #000000;
-    }
-    .form-header-group .form-subHeader {
-      color: #000000;
-    }
-    .form-label-top,
-    .form-label-left,
-    .form-label-right,
-    .form-html,
-    .form-checkbox-item label,
-    .form-radio-item label,
-    span.FITB .qb-checkbox-label,
-    span.FITB .qb-radiobox-label,
-    span.FITB .form-radio label,
-    span.FITB .form-checkbox label,
-    [data-blotid][data-type=checkbox] [data-labelid],
-    [data-blotid][data-type=radiobox] [data-labelid],
-    span.FITB-inptCont[data-type=checkbox] label,
-    span.FITB-inptCont[data-type=radiobox] label {
-      color: #000000;
-    }
-    .form-sub-label {
-      color: #1a1a1a;
-    }
-  
-    .supernova {
-      background-color: #4c72fb;
-    }
-    .supernova body {
-      background: transparent;
-    }
-  
-    .form-textbox,
-    .form-textarea,
-    .form-dropdown,
-    .form-radio-other-input,
-    .form-checkbox-other-input,
-    .form-captcha input,
-    .form-spinner input {
-      background-color: #fff;
-    }
-  
-    .supernova {
-      background-image: none;
-    }
-    #stage {
-      background-image: none;
-    }
-  
-    .form-all {
-      background-image: none;
-    }
-  
-  .ie-8 .form-all:before { display: none; }
-  .ie-8 {
-    margin-top: auto;
-    margin-top: initial;
-  }
-  
-  /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/.form-all {
-    border-radius: 12px;
-    box-shadow : 0 0 32px rgba(42, 42, 42, 0.16);
-}
-
-.form-header-group {
-  overflow: hidden;
-  border: 0;
-  padding-bottom: 12px;
-}
-
-.form-header-group .header-text {
-  border-top: 1px dashed #d7d8e1;
-  margin-top: 0;
-  padding-top: 24px;
-}
-
-    /* Injected CSS Code */
-</style>
-
-<form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="./collect" method="post" name="form_233393496409567" id="233393496409567" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="233393496409567" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" /><input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1701885799698" /><input type="hidden" id="submitSource" name="submitSource" value="unknown" /><input type="hidden" id="buildDate" name="buildDate" value="1701885799698" />
-  <div role="main" class="form-all">
-    <ul class="form-section page-section">
-      <li id="cid_1" class="form-input-wide" data-type="control_head">
-        <div style="display:table;width:100%">
-          <div class="form-header-group hasImage header-default" data-imagealign="Top">
-            <div class="header-logo"><img src="https://www.jotform.com/uploads/eugenekipropsangtg/form_files/trusted%20advisers%20realty%20logo%20-%20transparent%20trimmed.65707b00ebafa4.75229660.png" alt="A selling plan to Guarantee your success!" width="340" class="header-logo-top" /></div>
-            <div class="header-text httac htvam">
-              <h2 id="header_1" class="form-header" data-component="header">A selling plan to Guarantee your success!</h2>
-              <div id="subHeader_1" class="form-subHeader">Get house valuation and our offer to buy your home.</div>
+  <body>
+    <%- include('nav') %>
+      <section id="body">
+        <div class="step-title">
+          <h2 class="step-description">Your basic information</h2>
+        </div>
+        <div id="step-1" class="step active">
+          <form action="/home-valuation/appointment?step=1" method="post" id="form-1">
+            <div class="input-card">
+              <label for="firstName">
+                First Name
+              </label>
+              <input type="text" name="firstName" id="firstName">
+            </div>
+            <div class="input-card">
+              <label for="lastName">
+                Last Name
+              </label>
+              <input type="text" name="lastName" id="lastName">
+            </div>
+          </form>
+        </div>
+        <div id="step-2" class="step">
+          <div id="form-2">
+            <div class="input-card">
+              <label for="email">
+                Your Email
+              </label>
+              <input type="email" name="email" id="email">
+            </div>
+            <div class="input-card">
+              <label for="phone">
+                Your Phone Number
+              </label>
+              <input type="tel" name="phone" id="phone">
             </div>
           </div>
         </div>
-      </li>
-      <li class="form-line" data-type="control_text" id="id_15">
-        <div id="cid_15" class="form-input-wide" data-layout="full">
-          <div id="text_15" class="form-html" data-component="text" tabindex="0">
-            <p>We’ll send you the valuation along with our offer to buy your home. You can activate our offer to sell without listing or showing your home. You even choose the closing day (within 45 days) so you can move at your convenience.</p>
-            <p>Before you activate our offer, you may also ‘list’ your Alberta home with Trusted Advisers Realty. Saskatchewan and Manitoba sellers can list with any of our preferred referral partner Realtors. Listing on MLS, and having showings is optional when you work with Trusted Advisers Realty. You can list your home at an asking price you choose - for as long as it takes to sell; or until you decide to activate our offer.</p>
-            <p>Order your valuation! Before you do anything, get your home professional (independently) valuated, and consider our offer. We offer up to 92% of the current valuated value. We pay more for higher priced homes. Get an valuation with our offer, then choose how you want to sell. Our offer can be activated at any time. Your home sale is guaranteed when you work with Trusted Advisers Realty – unlike any other Realtor.</p>
-            <p>Please complete the form below to begin the process.</p>
-          </div>
-        </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_dropdown" id="id_17"><label class="form-label form-label-top form-label-auto" id="label_17" for="input_17" aria-hidden="false"> Type of property<span class="form-required">*</span> </label>
-        <div id="cid_17" class="form-input-wide jf-required" data-layout="half"> <select class="form-dropdown validate[required]" id="input_17" name="q17_typeOf" style="width:310px" data-component="dropdown" required="" aria-label="Type of property">
-            <option value="">Please Select</option>
-            <option selected="" value="Single family">Single family</option>
-            <option value="Condo - Appartment Style">Condo - Appartment Style</option>
-          </select> </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_dropdown" id="id_18"><label class="form-label form-label-top form-label-auto" id="label_18" for="input_18" aria-hidden="false"> Province<span class="form-required">*</span> </label>
-        <div id="cid_18" class="form-input-wide jf-required" data-layout="half"> <select class="form-dropdown validate[required]" id="input_18" name="q18_typeA" style="width:310px" data-component="dropdown" required="" aria-label="Province">
-            <option value="">Please Select</option>
-            <option selected="" value="Alberta">Alberta</option>
-            <option value="British Columbia">British Columbia</option>
-            <option value="Manitoba">Manitoba</option>
-            <option value="New Brunswick">New Brunswick</option>
-            <option value="Newfoundland">Newfoundland</option>
-            <option value="Northwest Territories">Northwest Territories</option>
-            <option value="Nova Scotia">Nova Scotia</option>
-            <option value="Nunavut">Nunavut</option>
-            <option value="Ontario">Ontario</option>
-            <option value="Prince Edward Island">Prince Edward Island</option>
-            <option value="Quebec">Quebec</option>
-            <option value="Saskatchewan">Saskatchewan</option>
-            <option value="Yukon">Yukon</option>
-          </select> </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_textbox" id="id_19"><label class="form-label form-label-top form-label-auto" id="label_19" for="input_19" aria-hidden="false"> Customer Name<span class="form-required">*</span> </label>
-        <div id="cid_19" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_19" name="q19_typeA19" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_19" required="" value="" /> </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_textbox" id="id_20"><label class="form-label form-label-top form-label-auto" id="label_20" for="input_20" aria-hidden="false"> Property address<span class="form-required">*</span> </label>
-        <div id="cid_20" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_20" name="q20_propertyAddress" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_20" required="" value="" /> </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_radio" id="id_21"><label class="form-label form-label-top form-label-auto" id="label_21" aria-hidden="false"> Are you already listed with another agent?<span class="form-required">*</span> </label>
-        <div id="cid_21" class="form-input-wide jf-required" data-layout="full">
-          <div class="form-single-column" role="group" aria-labelledby="label_21" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" id="input_21_0" name="q21_areYou" value="Yes" required="" /><label id="label_input_21_0" for="input_21_0">Yes</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" id="input_21_1" name="q21_areYou" checked="" value="No" required="" /><label id="label_input_21_1" for="input_21_1">No</label></span></div>
-        </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_radio" id="id_24"><label class="form-label form-label-top form-label-auto" id="label_24" aria-hidden="false"> Property valuation cost<span class="form-required">*</span> </label>
-        <div id="cid_24" class="form-input-wide jf-required" data-layout="full">
-          <div class="form-single-column" role="group" aria-labelledby="label_24" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_24" class="form-radio validate[required]" id="input_24_0" name="q24_propertyValuation" value="FREE! Trusted Advisers Realty will cover the cost of my valuation as I plan to either accept the offer or list my home with TAR (or a TAR referral partner in SK or MB). I’ll get an valuation and the TAR offer which I can activate to skip showings. I may also list my home with TAR (or a TAR referral partner in SK or MB) before accepting the offer. Either way, I’ll work with TAR so my valuation will be at no cost (paid entirely by TAR)." required="" /><label id="label_input_24_0" for="input_24_0">FREE! Trusted Advisers Realty will cover the cost of my valuation as I plan to either accept the offer or list my home with TAR (or a TAR referral partner in SK or MB). I’ll get an valuation and the TAR offer which I can activate to skip showings. I may also list my home with TAR (or a TAR referral partner in SK or MB) before accepting the offer. Either way, I’ll work with TAR so my valuation will be at no cost (paid entirely by TAR).</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_24" class="form-radio validate[required]" id="input_24_1" name="q24_propertyValuation" value="$500. I want to review the valuation and the Trusted Advisers Realty offer but if I don’t accept the offer, I might work with another Realtor so I’ll pay $500 for the valuation and the TAR offer." required="" /><label id="label_input_24_1" for="input_24_1">$500. I want to review the valuation and the Trusted Advisers Realty offer but if I don’t accept the offer, I might work with another Realtor so I’ll pay $500 for the valuation and the TAR offer.</label></span></div>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-1 jf-required" data-type="control_phone" id="id_4"><label class="form-label form-label-top form-label-auto" id="label_4" for="input_4_full"> Phone Number<span class="form-required">*</span> </label>
-        <div id="cid_4" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_4_full" name="q4_phoneNumber[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" style="width:310px" data-masked="true" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_4 sublabel_4_masked" required="" value="" /><label class="form-sub-label" for="input_4_full" id="sublabel_4_masked" style="min-height:13px" aria-hidden="false">Please enter a valid phone number.</label></span> </div>
-      </li>
-      <li class="form-line form-line-column form-col-2 jf-required" data-type="control_email" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Email Address<span class="form-required">*</span> </label>
-        <div id="cid_5" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_5" name="q5_emailAddress" class="form-textbox validate[required, Email]" data-defaultvalue="" style="width:310px" size="310" data-component="email" aria-labelledby="label_5 sublabel_input_5" required="" value="" /><label class="form-sub-label" for="input_5" id="sublabel_input_5" style="min-height:13px" aria-hidden="false">example@example.com</label></span> </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_signature" id="id_25"><label class="form-label form-label-top form-label-auto" id="label_25" for="input_25" aria-hidden="false"> Signature<span class="form-required">*</span> </label>
-        <div id="cid_25" class="form-input-wide jf-required" data-layout="half">
-          <div data-wrapper-react="true">
-            <div id="signature_pad_25" class="signature-pad-wrapper" style="width:312px;height:116px">
-              <div data-wrapper-react="true">
-                <!--[if IE 7]><script type="text/javascript" src="/js/vendor/json2.js"></script><![endif]-->
-              </div>
-              <div class="signature-line signature-wrapper signature-placeholder" data-component="signature" style="width:312px;height:116px;position:relative">
-                <div id="sig_pad_25" data-width="310" data-height="114" data-id="25" data-required="true" class="pad validate[required]" aria-labelledby="label_25"></div><input type="hidden" name="q25_signature" class="output4" id="input_25" />
-              </div><a style="margin-top:2px;font-size:10px;color:inherit;text-decoration:none;float:left" href="https://www.jotform.com/products/sign?utm_source=sign_cardform&amp;utm_content=form&amp;utm_medium=button&amp;utm_campaign=sign_form_integration" target="_blank">Powered by <b style="color:#7BB60F">Jotform Sign</b></a> <span class="clear-pad-btn clear-pad" role="button" tabindex="0">Clear</span>
+        <div id="step-3" class="step">
+          <div id="form-3">
+            <div class="input-card">
+              <label for="address">Property address</label>
+              <input type="text" name="address" id="address">
             </div>
-            <div data-wrapper-react="true">
-              <script type="text/javascript">
-                window.signatureForm = true
-              </script>
+            <div class="input-card">
+              <label for="date">Date schedule</label>
+              <input type="date" name="date" id="date">
+            </div>
+            <div class="input-card">
+              <label for="time">Time schedule</label>
+              <input type="time" name="time" id="time">
             </div>
           </div>
         </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_datetime" id="id_40"><label class="form-label form-label-top form-label-auto" id="label_40" for="lite_mode_40" aria-hidden="false"> When should the valuation take place?<span class="form-required">*</span> </label>
-        <div id="cid_40" class="form-input-wide jf-required" data-layout="half">
-          <div data-wrapper-react="true">
-            <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[required, limitDate]" id="month_40" name="q40_whenShould[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_40 sublabel_40_month" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_40" id="sublabel_40_month" style="min-height:13px" aria-hidden="false">Month</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[required, limitDate]" id="day_40" name="q40_whenShould[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_40 sublabel_40_day" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_40" id="sublabel_40_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[required, limitDate]" id="year_40" name="q40_whenShould[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" required="" autoComplete="off" aria-labelledby="label_40 sublabel_40_year" /><label class="form-sub-label" for="year_40" id="sublabel_40_year" style="min-height:13px" aria-hidden="false">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top"><input type="text" class="form-textbox validate[required, limitDate, validateLiteDate]" id="lite_mode_40" size="12" data-maxlength="12" maxLength="12" data-age="" value="" required="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" data-placeholder="MM-DD-YYYY" autoComplete="off" aria-labelledby="label_40 sublabel_40_litemode" /><img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_40_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" /><label class="form-sub-label" for="lite_mode_40" id="sublabel_40_litemode" style="min-height:13px" aria-hidden="false">Select date</label></span>
-          </div>
+        <div class="step-progress">
+          <div class="progress-at passed">1</div>
+          <div class="progress-dash passed"></div>
+          <div class="progress-at active">2</div>
+          <div class="progress-dash"></div>
+          <div class="progress-at">3</div>
+          <div class="progress-dash"></div>
+          <div class="progress-at done"><i class="fas fa-check"></i></div>
         </div>
-      </li>
-      <li class="form-line" data-type="control_textbox" id="id_29"><label class="form-label form-label-top form-label-auto" id="label_29" for="input_29" aria-hidden="false"> Who referred you? </label>
-        <div id="cid_29" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_29" name="q29_whoReferred" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_29 sublabel_input_29" value="" /><label class="form-sub-label" for="input_29" id="sublabel_input_29" style="min-height:13px" aria-hidden="false">Name of Referrer </label></span> </div>
-      </li>
-      <li class="form-line card-1col jf-required" data-type="control_stripe" id="id_33" data-payment="true"><label class="form-label form-label-top" id="label_33" for="input_33" aria-hidden="false"> Appraisal fee<span class="form-required">*</span> </label>
-        <div id="cid_33" class="form-input-wide jf-required" data-layout="full">
-          <div data-wrapper-react="true" class="stripe-payment-wrapper" data-stripe-currency="CAD">
-            <div data-wrapper-react="true" class="product-container-wrapper">
-              <div class="filter-container"></div><input type="hidden" name="simple_fpc" data-payment_type="stripe" data-component="payment1" value="33" /><input type="hidden" name="payment_transaction_uuid" id="paymentTransactionId" /><input type="hidden" name="payment_total_checksum" id="payment_total_checksum" data-component="payment2" /><input type="hidden" name="payment_discount_value" id="payment_discount_value" data-component="payment3" />
-              <div id="image-overlay" class="overlay-content" style="display:none"><img id="current-image" /><span class="lb-prev-button">prev</span><span class="lb-next-button">next</span><span class="lb-close-button">( X )</span><span class="image-overlay-product-container"></span></div><span class="form-sub-label-container" style="vertical-align:top"><input type="text" class="form-textbox validate[required, Numeric]" id="input_33_donation" name="q33_appraisalFee[price]" value="" data-component="paymentDonation" aria-labelledby="label_33" data-testid="donationInput" /><span class="donation_currency">CAD</span><label data-testid="donationSubLabel" class="form-sub-label" for="input_33_donation" style="min-height:13px" aria-hidden="false">Description</label></span>
-              <hr />
-            </div>
-            <div id="stripe-templates">
-              <div class="stripe-sca-template">
-                <div>
-                  <table class="payment-up-form-table" style="border:0;margin-bottom:10px" cellPadding="0" cellSpacing="0">
-                    <tbody>
-                      <tr>
-                        <td width="50%"></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <table class="form-address-table payment-form-table" style="border:0" cellPadding="0" cellSpacing="0">
-                    <tbody>
-                      <tr>
-                        <th colSpan="2" style="text-align:left" id="ccTitle33">Credit Card Details</th>
-                      </tr>
-                      <tr>
-                        <td width="50%"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_33_cc_firstName" name="q33_appraisalFee[cc_firstName]" class="form-textbox validate[required] cc_firstName" data-defaultvalue="" size="20" placeholder="First Name" data-component="cc_firstName" aria-label="First Name" value="" /><label class="form-sub-label" for="input_33_cc_firstName" id="sublabel_cc_firstName" style="display:none" aria-hidden="false">First Name</label></span></td>
-                        <td width="50%"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_33_cc_lastName" name="q33_appraisalFee[cc_lastName]" class="form-textbox validate[required] cc_lastName" data-defaultvalue="" size="20" placeholder="Last Name" data-component="cc_lastName" aria-label="Last Name" value="" /><label class="form-sub-label" for="input_33_cc_lastName" id="sublabel_cc_lastName" style="display:none" aria-hidden="false">Last Name</label></span></td>
-                      </tr>
-                      <tr class="if_cc_field">
-                        <td width="50%"><span class="form-sub-label-container" style="vertical-align:top">
-                            <div class="form-textbox cc_numberMount "></div><label class="form-sub-label" for="input_33_cc_number" id="sublabel_cc_number" style="display:none" aria-hidden="false">Credit Card Number</label>
-                          </span></td>
-                        <td width="50%"><span class="form-sub-label-container" style="vertical-align:top">
-                            <div class="form-textbox cc_ccvMount "></div><label class="form-sub-label" for="input_33_cc_ccv" id="sublabel_cc_ccv" style="display:none" aria-hidden="false">Security Code</label>
-                          </span></td>
-                      </tr>
-                      <tr>
-                        <td width="50%"><span class="form-sub-label-container" style="vertical-align:top">
-                            <div class="form-textbox cc_cardExpiryMount "></div><label class="form-sub-label" for="input_33_cc_card_expiry" id="sublabel_cc_card_expiry" style="display:none" aria-hidden="false">Card Expiration</label>
-                          </span></td>
-                        <td width="50%">
-                      <tr style="display:none">
-                        <td><input id="stripesca_dummy" style="display:none" /></td>
-                      </tr>
-                      </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div id="payment-element" class="payment-element" style="border:0;display:none"></div><input id="stripePe_dummy" style="display:none" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_address" id="id_34" data-compound-hint=",,,,Please Select,,Please Select,"><label class="form-label form-label-top form-label-auto" id="label_34" for="input_34_addr_line1" aria-hidden="false"> Credit Card Billing Address<span class="form-required">*</span> </label>
-        <div id="cid_34" class="form-input-wide jf-required" data-layout="full">
-          <div summary="" class="form-address-table jsTest-addressField">
-            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_34_addr_line1" name="q34_creditCard[addr_line1]" class="form-textbox validate[required] form-address-line" data-defaultvalue="" data-component="address_line_1" aria-labelledby="label_34 sublabel_34_addr_line1" required="" value="" /><label class="form-sub-label" for="input_34_addr_line1" id="sublabel_34_addr_line1" style="min-height:13px" aria-hidden="false">Street Address</label></span></span></div>
-            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_34_addr_line2" name="q34_creditCard[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" data-component="address_line_2" aria-labelledby="label_34 sublabel_34_addr_line2" required="" value="" /><label class="form-sub-label" for="input_34_addr_line2" id="sublabel_34_addr_line2" style="min-height:13px" aria-hidden="false">Street Address Line 2</label></span></span></div>
-            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_34_city" name="q34_creditCard[city]" class="form-textbox validate[required] form-address-city" data-defaultvalue="" data-component="city" aria-labelledby="label_34 sublabel_34_city" required="" value="" /><label class="form-sub-label" for="input_34_city" id="sublabel_34_city" style="min-height:13px" aria-hidden="false">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_34_state" name="q34_creditCard[state]" class="form-textbox validate[required] form-address-state" data-defaultvalue="" data-component="state" aria-labelledby="label_34 sublabel_34_state" required="" value="" /><label class="form-sub-label" for="input_34_state" id="sublabel_34_state" style="min-height:13px" aria-hidden="false">State / Province</label></span></span></div>
-            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_34_postal" name="q34_creditCard[postal]" class="form-textbox validate[required] form-address-postal" data-defaultvalue="" data-component="zip" aria-labelledby="label_34 sublabel_34_postal" required="" value="" /><label class="form-sub-label" for="input_34_postal" id="sublabel_34_postal" style="min-height:13px" aria-hidden="false">Postal / Zip Code</label></span></span></div>
-          </div>
-        </div>
-      </li>
-      <li id="cid_35" class="form-input-wide" data-type="control_head">
-        <div class="form-header-group  header-default">
-          <div class="header-text httal htvam">
-            <h2 id="header_35" class="form-header" data-component="header">Activate our offer any time.</h2>
-            <div id="subHeader_35" class="form-subHeader">Once you have our offer you can activate a sale for the day you want to move - skip the showings and hassles. You may also (optional) list your home with Trusted Advisers Realty for as long as it takes to sell, or until you want to activate our offer. Your sale is guaranteed - unlike any other Realtor. </div>
-          </div>
-        </div>
-      </li>
-      <li id="cid_36" class="form-input-wide" data-type="control_head">
-        <div class="form-header-group  header-default">
-          <div class="header-text httal htvam">
-            <h2 id="header_36" class="form-header" data-component="header">Trusted Advisers Realty is not a ‘low-ball’ buyer. </h2>
-            <div id="subHeader_36" class="form-subHeader">We offer to pay up to 92% of valuated value. All fees, commissions, and costs are included in our offer so there are no surprises. Activate our offer any time! </div>
-          </div>
-        </div>
-      </li>
-      <li id="cid_37" class="form-input-wide" data-type="control_head">
-        <div class="form-header-group  header-default">
-          <div class="header-text httal htvam">
-            <h2 id="header_37" class="form-header" data-component="header">Choose any closing date within 45 days. </h2>
-            <div id="subHeader_37" class="form-subHeader">Your closing (moving) date must be within 45 days of the valuation. We accommodate longer closings, but the valuation may need to be updated to ensure the value is current. There’s no additional cost to update your valuation.</div>
-          </div>
-        </div>
-      </li>
-      <li id="cid_38" class="form-input-wide" data-type="control_head">
-        <div class="form-header-group  header-default">
-          <div class="header-text httal htvam">
-            <h2 id="header_38" class="form-header" data-component="header">Referral Disclosure.</h2>
-            <div id="subHeader_38" class="form-subHeader">Our customers frequently ask us to recommend related service providers such as home builders, lenders, mortgage brokers, movers, etc. Some service providers might pay us a referral fee. If you have any questions, please schedule a call.</div>
-          </div>
-        </div>
-      </li>
-      <li class="form-line always-hidden jf-required" data-type="control_captcha" id="id_39"><label class="form-label form-label-top form-label-auto" id="label_39" for="input_39" aria-hidden="false"> Please verify that you are human<span class="form-required">*</span> </label>
-        <div id="cid_39" class="form-input-wide always-hidden jf-required" data-layout="full">
-          <section data-wrapper-react="true" data-invisible-captcha="true">
-            <div id="recaptcha_input_39" data-component="recaptcha" data-callback="recaptchaCallbackinput_39" data-size="invisible" data-badge="inline" data-expired-callback="recaptchaExpiredCallbackinput_39"></div><input type="hidden" id="input_39" class="hidden " name="recaptcha_invisible" required="" />
-            <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=explicit&amp;onload=recaptchaLoadedinput_39"></script>
-            <script type="text/javascript">
-              var recaptchaLoadedinput_39 = function()
-              {
-                window.grecaptcha.render($("recaptcha_input_39"),
-                {
-                  sitekey: '6LcG3CgUAAAAAGOEEqiYhmrAm6mt3BDRhTrxWCKb',
-                });
-                var grecaptchaBadge = document.querySelector('.grecaptcha-badge');
-                if (grecaptchaBadge)
-                {
-                  grecaptchaBadge.style.boxShadow = 'gray 0px 0px 2px';
-                }
-              };
-
-              /**
-               * Called when the reCaptcha verifies the user is human
-               * For invisible reCaptcha;
-               *   Submit event is stopped after validations and recaptcha is executed.
-               *   If a challenge is not displayed, this will be called right after grecaptcha.execute()
-               *   If a challenge is displayed, this will be called when the challenge is solved successfully
-               *   Submit is triggered to actually submit the form since it is stopped before.
-               */
-              var recaptchaCallbackinput_39 = function()
-              {
-                var isInvisibleReCaptcha = true;
-                var hiddenInput = $("input_39");
-                hiddenInput.setValue(1);
-                if (!isInvisibleReCaptcha)
-                {
-                  if (hiddenInput.validateInput)
-                  {
-                    hiddenInput.validateInput();
-                  }
-                }
-                else
-                {
-                  triggerSubmit(hiddenInput.form)
-                }
-
-                function triggerSubmit(formElement)
-                {
-                  var button = formElement.ownerDocument.createElement('input');
-                  button.style.display = 'none';
-                  button.type = 'submit';
-                  formElement.appendChild(button).click();
-                  formElement.removeChild(button);
-                }
-              }
-
-              // not really required for invisible recaptcha
-              var recaptchaExpiredCallbackinput_39 = function()
-              {
-                var hiddenInput = $("input_39");
-                hiddenInput.writeAttribute("value", false);
-                if (hiddenInput.validateInput)
-                {
-                  hiddenInput.validateInput();
-                }
-              }
-            </script>
-          </section>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_button" id="id_2">
-        <div id="cid_2" class="form-input-wide" data-layout="full">
-          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_2" style="display:none !important" type="button" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">SUBMIT</button><button type="button" class="form-submit-button submit-button jf-form-buttons jsTest-submitField useJotformSign-button useJotformSign " data-component="button" data-content="">SUBMIT</button></div>
-        </div>
-      </li>
-      <li style="clear:both"></li>
-      <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
-    </ul>
-  </div>
-  <script>
-    JotForm.showJotFormPowered = "new_footer";
-  </script>
-  <script>
-    JotForm.poweredByText = "Powered by Jotform";
-  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="233393496409567" />
-  <script type="text/javascript">
-    var all_spc = document.querySelectorAll("form[id='233393496409567'] .si" + "mple" + "_spc");
-    for (var i = 0; i < all_spc.length; i++)
-    {
-      all_spc[i].value = "233393496409567-233393496409567";
+      </section>
+      <%- include('footer') %>
+  </body>
+  <style>
+    #body {
+      margin-top: 100px;
     }
-  </script>
-</form><script type="text/javascript">JotForm.ownerView=true;</script><script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.48690"></script>
-<script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.48690"></script>
-<script type="text/javascript">JotForm.isNewSACL=true;</script>
-        </section>
-        <%- include('footer') %>
-</body>
-<style>
-    #valuation-content{
-        margin-top: 100px;
+
+    .input-card {
+      margin: 10px;
     }
-</style>
+
+    .input-card input {
+      border: 1px solid gray;
+    }
+
+    .step{
+      display: none;
+    }
+
+    .step-title{
+      text-align: center;
+    }
+
+    .step.active{
+      display: block;
+      width: fit-content;
+      margin: 40px auto;
+    }
+
+    .step-progress{
+      display: grid;
+      grid-template-columns: repeat(7, auto);
+      width: fit-content;
+      margin: 10px auto;
+      align-items: center;
+    }
+
+    .progress-at{
+      font-size: 25px;
+      border-radius: 30px;
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      border: 1px solid gray;
+      color: gray;
+      display: flex;
+      align-items: stretch;
+      align-content: space-around;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .progress-at.active{
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .progress-at.passed{
+      color: white;
+      background-color: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .progress-dash {
+      width: 40px;
+      height: 3px;
+      background-color: gray;
+    }
+
+    .progress-dash.passed{
+      background-color: var(--blue);
+    }
+  </style>
 
 </html>
