@@ -1,13 +1,13 @@
 const express = require('express');
 const {
-    saveStep1Data,
-    saveStep2Data,
-    saveStep3Data
+    saveData
 } = require('../models/valuationData.js');
 const router = express.Router();
 
 router.get('/', (req, res) => {
     const page = req.query.page || 1;
+    const {firstName, lastName, email, phone} = req.query;
+
     const title = (()=>{
         if(page == 1){
             return "Your Basic Information"
@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
             return "An Error Occurred"
         }
     })()
-    res.render('home-valuation', { page, title });
+    res.render('home-valuation', { page, title, firstName, lastName, phone, email });
 });
 
 
@@ -28,36 +28,31 @@ router.post('/appointment', (req, res) => {
 
     // Assuming req.body contains the form data
 
+    var {firstName, lastName, email, phone} = req.body;
+
     switch (step) {
         case '1':
-            saveStep1Data(req.body, (err, result) => {
-                if (err) {
-                    // Handle the error appropriately (e.g., send an error response)
-                    res.status(500).json({ error: 'Internal Server Error' });
-                } else {
-                    // Continue with any logic needed, such as redirecting to the next step
-                    res.redirect('/home-valuation?page=2');
-                }
-            });
+            if(!firstName || !lastName){
+                res.redirect('/home-valuation?page=1')
+            }else{
+                res.redirect(`/home-valuation?page=2&firstName=${firstName}&lastName=${lastName}`)
+            }
             break;
         case '2':
-            saveStep2Data(req.body, (err, result) => {
-                if (err) {
-                    // Handle the error appropriately (e.g., send an error response)
-                    res.status(500).json({ error: 'Internal Server Error' });
-                } else {
-                    // Continue with any logic needed, such as redirecting to the next step
-                    res.redirect('/home-valuation?page=3');
-                }
-            });
+            if(!firstName || !lastName || !email || !phone){
+                res.redirect('/home-valuation?page=1')
+            }else{
+                res.redirect(`/home-valuation?page=3&firstName=${firstName}&lastName=${lastName}&email=${email}&phone=${phone}`)
+            }
             break;
         case '3':
-            saveStep3Data(req.body, (err, result) => {
+            saveData(req.body, (err, result) => {
                 if (err) {
                     // Handle the error appropriately (e.g., send an error response)
                     res.status(500).json({ error: 'Internal Server Error' });
                 } else {
                     // Continue with any logic needed, such as redirecting to the next step
+                    console.log(result);
                     res.redirect('/home-valuation/appointment-success');
                 }
             });

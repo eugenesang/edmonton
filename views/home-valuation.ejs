@@ -17,53 +17,63 @@
             <label for="firstName">
               First Name
             </label>
-            <input type="text" name="firstName" id="firstName">
+            <input required type="text" name="firstName" id="firstName">
           </div>
           <div class="input-card">
             <label for="lastName">
               Last Name
             </label>
-            <input type="text" name="lastName" id="lastName">
+            <input required type="text" name="lastName" id="lastName">
           </div>
-          <button disabled>Next</button>
+          <button >Next</button>
         </form>
       </div>
     <% } else if (page == 2) { %>
       <!-- Step 2 -->
       <div id="step-2" class="step active">
         <form action="/home-valuation/appointment?step=2" method="post" id="form-2">
+          <div class="hidden">
+            <input type="text" name="lastName" value="<%= lastName %>">
+            <input type="text" name="firstName" value="<%= firstName %>">
+          </div>
           <div class="input-card">
             <label for="email">
               Your Email
             </label>
-            <input type="email" name="email" id="email">
+            <input required type="email" name="email" id="email">
           </div>
           <div class="input-card">
             <label for="phone">
               Your Phone Number
             </label>
-            <input type="tel" name="phone" id="phone">
+            <input required type="tel" name="phone" id="phone">
           </div>
-          <button disabled>Next</button>
+          <button >Next</button>
         </form>
       </div>
     <% } else if (page == 3) { %>
       <!-- Step 3 -->
       <div id="step-3" class="step active">
         <form action="/home-valuation/appointment?step=3" method="post" id="form-3">
+          <div class="hidden">
+            <input type="text" name="lastName" value="<%= lastName %>">
+            <input type="text" name="firstName" value="<%= firstName %>">
+            <input type="text" name="email" value="<%= email %>">
+            <input type="text" name="phone" value="<%= phone %>">
+          </div>
           <div class="input-card">
             <label for="address">Property address</label>
-            <input type="text" name="address" id="address">
+            <input required type="text" name="address" id="address">
           </div>
           <div class="input-card">
             <label for="date">Date schedule</label>
-            <input type="date" name="date" id="date">
+            <input required type="date" name="date" id="date">
           </div>
           <div class="input-card">
             <label for="time">Time schedule</label>
-            <input type="time" name="time" id="time">
+            <input required type="time" name="time" id="time">
           </div>
-          <button disabled>Submit</button>
+          <button >Submit</button>
         </form>
       </div>
     <% } %>
@@ -150,6 +160,18 @@
 
     .progress-dash.passed{
       background-color: var(--blue);
+    }
+
+    form button{
+      border: 1px solid var(--blue);
+      margin-top: 20px;
+      background-color: var(--blue);
+      color: white;
+    }
+
+    form button:disabled{
+      color: gray;
+      border-color: rgb(188, 188, 188);
     }
   </style>
 
