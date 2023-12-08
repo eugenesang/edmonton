@@ -23,7 +23,7 @@ function createAccountsTable() {
   });
 }
 
-function createHousesTable(){
+function createHousesTable() {
   const createTableQuery = `
     CREATE TABLE  IF NOT EXISTS houses (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -66,7 +66,7 @@ function createHousesTable(){
     )
   `;
 
-  connection.query(createTableQuery, (err, results)=>{
+  connection.query(createTableQuery, (err, results) => {
     if (err) {
       console.error('Error creating agents table:', err);
     } else {
@@ -109,7 +109,13 @@ function createValuationTable() {
   const createTableQuery = `
     CREATE TABLE IF NOT EXISTS valuation (
       id INT AUTO_INCREMENT PRIMARY KEY,
-      data TEXT,
+      firstName VARCHAR(255),
+      lastName VARCHAR(255),
+      email VARCHAR(255),
+      phone VARCHAR(20),
+      address TEXT,
+      date DATE,
+      time TIME,
       createdAt VARCHAR(20),
       done TEXT
     )
@@ -117,12 +123,13 @@ function createValuationTable() {
 
   connection.query(createTableQuery, (err, results) => {
     if (err) {
-      console.error('Error creating agents table:', err);
+      console.error('Error creating valuation table:', err);
     } else {
-      console.log(results);
+      console.log('Valuation table created successfully');
     }
   });
 }
+
 
 function setupDatabase() {
   createAccountsTable();

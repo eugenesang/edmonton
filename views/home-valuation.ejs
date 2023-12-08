@@ -2,72 +2,85 @@
 <html lang="en">
 <%- include('head') %>
 
-  <body>
-    <%- include('nav') %>
-      <section id="body">
-        <div class="step-title">
-          <h2 class="step-description">Your basic information</h2>
-        </div>
-        <div id="step-1" class="step active">
-          <form action="/home-valuation/appointment?step=1" method="post" id="form-1">
-            <div class="input-card">
-              <label for="firstName">
-                First Name
-              </label>
-              <input type="text" name="firstName" id="firstName">
-            </div>
-            <div class="input-card">
-              <label for="lastName">
-                Last Name
-              </label>
-              <input type="text" name="lastName" id="lastName">
-            </div>
-          </form>
-        </div>
-        <div id="step-2" class="step">
-          <div id="form-2">
-            <div class="input-card">
-              <label for="email">
-                Your Email
-              </label>
-              <input type="email" name="email" id="email">
-            </div>
-            <div class="input-card">
-              <label for="phone">
-                Your Phone Number
-              </label>
-              <input type="tel" name="phone" id="phone">
-            </div>
+<body>
+  <%- include('nav') %>
+  <section id="body">
+    <div class="step-title">
+      <h2 class="step-description"><%= title %></h2>
+    </div>
+
+    <% if (page == 1) { %>
+      <!-- Step 1 -->
+      <div id="step-1" class="step active">
+        <form action="/home-valuation/appointment?step=1" method="post" id="form-1">
+          <div class="input-card">
+            <label for="firstName">
+              First Name
+            </label>
+            <input type="text" name="firstName" id="firstName">
           </div>
-        </div>
-        <div id="step-3" class="step">
-          <div id="form-3">
-            <div class="input-card">
-              <label for="address">Property address</label>
-              <input type="text" name="address" id="address">
-            </div>
-            <div class="input-card">
-              <label for="date">Date schedule</label>
-              <input type="date" name="date" id="date">
-            </div>
-            <div class="input-card">
-              <label for="time">Time schedule</label>
-              <input type="time" name="time" id="time">
-            </div>
+          <div class="input-card">
+            <label for="lastName">
+              Last Name
+            </label>
+            <input type="text" name="lastName" id="lastName">
           </div>
-        </div>
-        <div class="step-progress">
-          <div class="progress-at passed">1</div>
-          <div class="progress-dash passed"></div>
-          <div class="progress-at active">2</div>
-          <div class="progress-dash"></div>
-          <div class="progress-at">3</div>
-          <div class="progress-dash"></div>
-          <div class="progress-at done"><i class="fas fa-check"></i></div>
-        </div>
-      </section>
-      <%- include('footer') %>
-  </body>
+          <button disabled>Next</button>
+        </form>
+      </div>
+    <% } else if (page == 2) { %>
+      <!-- Step 2 -->
+      <div id="step-2" class="step active">
+        <form action="/home-valuation/appointment?step=2" method="post" id="form-2">
+          <div class="input-card">
+            <label for="email">
+              Your Email
+            </label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="input-card">
+            <label for="phone">
+              Your Phone Number
+            </label>
+            <input type="tel" name="phone" id="phone">
+          </div>
+          <button disabled>Next</button>
+        </form>
+      </div>
+    <% } else if (page == 3) { %>
+      <!-- Step 3 -->
+      <div id="step-3" class="step active">
+        <form action="/home-valuation/appointment?step=3" method="post" id="form-3">
+          <div class="input-card">
+            <label for="address">Property address</label>
+            <input type="text" name="address" id="address">
+          </div>
+          <div class="input-card">
+            <label for="date">Date schedule</label>
+            <input type="date" name="date" id="date">
+          </div>
+          <div class="input-card">
+            <label for="time">Time schedule</label>
+            <input type="time" name="time" id="time">
+          </div>
+          <button disabled>Submit</button>
+        </form>
+      </div>
+    <% } %>
+
+    <div class="step-progress">
+      <div class="progress-at<%= page >= 1 ? ' passed' : '' %>">1</div>
+      <div class="progress-dash <%= page > 1 ? 'passed': '' %>"></div>
+      <div class="progress-at<%= page == 2 ? ' active' : page > 2? ' passed': '' %>">2</div>
+      <div class="progress-dash<%= page > 2 ? ' passed' : '' %>"></div>
+      <div class="progress-at<%= page == 3 ? ' active' : '' %>">3</div>
+      <div class="progress-dash"></div>
+      <div class="progress-at<%= page >= 4 ? ' done' : '' %>"><i class="fas fa-check"></i></div>
+    </div>
+  </section>
+  <%- include('footer') %>
+</body>
+
   <style>
     #body {
       margin-top: 100px;
