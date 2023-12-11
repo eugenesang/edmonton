@@ -1,178 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('head') %>
-
+<script src="/scripts/schedule-appraisal.js" defer></script>
 <body>
   <%- include('nav') %>
-  <section id="body">
-    <div class="step-title">
-      <h2 class="step-description"><%= title %></h2>
-    </div>
+  <section id="root-element">
 
-    <% if (page == 1) { %>
-      <!-- Step 1 -->
-      <div id="step-1" class="step active">
-        <form action="/home-valuation/appointment?step=1" method="post" id="form-1">
-          <div class="input-card">
-            <label for="firstName">
-              First Name
-            </label>
-            <input required type="text" name="firstName" id="firstName">
-          </div>
-          <div class="input-card">
-            <label for="lastName">
-              Last Name
-            </label>
-            <input required type="text" name="lastName" id="lastName">
-          </div>
-          <button >Next</button>
-        </form>
-      </div>
-    <% } else if (page == 2) { %>
-      <!-- Step 2 -->
-      <div id="step-2" class="step active">
-        <form action="/home-valuation/appointment?step=2" method="post" id="form-2">
-          <div class="hidden">
-            <input type="text" name="lastName" value="<%= lastName %>">
-            <input type="text" name="firstName" value="<%= firstName %>">
-          </div>
-          <div class="input-card">
-            <label for="email">
-              Your Email
-            </label>
-            <input required type="email" name="email" id="email">
-          </div>
-          <div class="input-card">
-            <label for="phone">
-              Your Phone Number
-            </label>
-            <input required type="tel" name="phone" id="phone">
-          </div>
-          <button >Next</button>
-        </form>
-      </div>
-    <% } else if (page == 3) { %>
-      <!-- Step 3 -->
-      <div id="step-3" class="step active">
-        <form action="/home-valuation/appointment?step=3" method="post" id="form-3">
-          <div class="hidden">
-            <input type="text" name="lastName" value="<%= lastName %>">
-            <input type="text" name="firstName" value="<%= firstName %>">
-            <input type="text" name="email" value="<%= email %>">
-            <input type="text" name="phone" value="<%= phone %>">
-          </div>
-          <div class="input-card">
-            <label for="address">Property address</label>
-            <input required type="text" name="address" id="address">
-          </div>
-          <div class="input-card">
-            <label for="date">Date schedule</label>
-            <input required type="date" name="date" id="date">
-          </div>
-          <div class="input-card">
-            <label for="time">Time schedule</label>
-            <input required type="time" name="time" id="time">
-          </div>
-          <button >Submit</button>
-        </form>
-      </div>
-    <% } %>
+    <form action="" >
+        <h1>
+            <span class="counter active">1</span>
+            <span class="next-process"></span>
+            <span class="counter">2</span>
+            <span class="next-process"></span>
+            <span class="counter">✓</span>
+        </h1>
+        <fieldset>
+            <legend>
+                <h1>Your Basic Info</h1>
+            </legend>
+            <div class="form-input">
+                <label for="name">Your name is</label>
+                <div class="input-container">
+                    <input type="text" name="name" id="name" required>
+                    <i class="fas fa-user input-icon"></i>
+                </div>
+            </div>
+            <div class="form-input">
+                <label for="email">Your email is </label>
+                <div class="input-container">
+                    <input type="email" name="email" id="email" required >
+                    <i class="fas fa-envelope input-icon"></i>
+                </div>
+            </div>
+            <div class="form-input">
+                <label for="phone">Your phone number is</label>
+                <div class="input-container">
+                    <input type="tel" name="phone" id="phone" required>
+                    <i class="fas fa-phone-flip input-icon"></i>
+                </div>
+            </div>
+            <div class="form-btn">
+                <button>NEXT</button>
+            </div>
 
-    <div class="step-progress">
-      <div class="progress-at<%= page >= 1 ? ' passed' : '' %>">1</div>
-      <div class="progress-dash <%= page > 1 ? 'passed': '' %>"></div>
-      <div class="progress-at<%= page == 2 ? ' active' : page > 2? ' passed': '' %>">2</div>
-      <div class="progress-dash<%= page > 2 ? ' passed' : '' %>"></div>
-      <div class="progress-at<%= page == 3 ? ' active' : '' %>">3</div>
-      <div class="progress-dash"></div>
-      <div class="progress-at<%= page >= 4 ? ' done' : '' %>"><i class="fas fa-check"></i></div>
+        </fieldset>
+    </form>
+    <form action="">
+        <h1>
+            <span class="counter done">✓</span>
+            <span class="next-process done"></span>
+            <span class="counter active">2</span>
+            <span class="next-process"></span>
+            <span class="counter">✓</span>
+        </h1>
+        <fieldset>
+            <legend>
+                <h1>Property info</h1>
+            </legend>
+            <div class="form-input">
+                <label for="address">The address of the property is</label>
+                <div class="input-container">
+                    <input type="text" name="address" id="address" placeholder="i.e 173-17008 90 Edmonton, AB">
+                    <i class="input-icon fas fa-map-location-dot"></i>
+                </div>
+            </div>
+            <div class="form-input">
+                <label for="date">The appraisal should be done on</label>
+                <div class="input-container">
+                    <span>
+                        <input type="date" name="date" id="date" >
+                        at
+                        <input type="time" name="time" id="time">
+                    </span>
+                    <i class="fas fa-mail input-icon"></i>
+                </div>
+            </div>
+            <div class="form-btn">
+                <button>SUBMIT</button>
+            </div>
+        </fieldset>
+    </form>
+    <div class="success-section" id="success-page">
+        <h1>
+            <span class="counter done">✓</span>
+            <span class="next-process done"></span>
+            <span class="counter done">✓</span>
+            <span class="next-process done"></span>
+            <span class="counter active">✓</span>
+        </h1>
+        <div>
+            <div>
+                <img src="/images/success-illustration.svg" alt="">
+            </div>
+            <h1>SUCCESS</h1>
+        </div>
     </div>
-  </section>
+    <div class="success-section" id="error-page">
+        <h1>
+            <span class="counter error">&#10005;</span>
+            <span class="next-process error"></span>
+            <span class="counter error">&#10005;</span>
+            <span class="next-process error"></span>
+            <span class="counter error">&#10005;</span>
+        </h1>
+        <div>
+            <div>
+                <img src="/images/error-illustration.svg" alt="">
+            </div>
+            <h1>AN ERROR OCCURRED</h1>
+        </div>
+    </div>
+    <div class="success-section" id="loading-page">
+        <h1>
+            <span class="counter loading">
+                <i class="fa-solid fa-spinner fa-spin"></i>
+            </span>
+            <span class="next-process loading"></span>
+            <span class="counter loading">
+                <i class="fa-solid fa-spinner fa-spin"></i>
+            </span>
+            <span class="next-process loading"></span>
+            <span class="counter loading">
+                <i class="fa-solid fa-spinner fa-spin"></i>
+            </span>
+        </h1>
+        <div>
+            <div>
+                <img src="/images/loading-animation.svg" alt="">
+            </div>
+            <h1>LOADING</h1>
+        </div>
+    </div>
+</section>
+<style>
+    #root-element{
+        min-height: 100vh;
+        display: grid;
+        align-items: center;
+    }
+    fieldset {
+        max-width: 700px;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid var(--blue);
+    }
+
+    legend h1 {
+        font-size: 1.75rem;
+        padding: 0px 10px;
+    }
+
+    form > h1, .success-section > h1{
+        width: fit-content;
+        margin: 10px auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+    }
+    span.counter {
+        font-family: var(--dm);
+        display: inline-block;
+        text-align: center;
+        border: 1px solid  var(--blue);
+        border-radius: 25px;
+        height: 50px;
+        width: 50px;
+        font-size: 35px;
+        margin: 10px auto;
+        color: var(--blue);
+        background-color: transparent;
+    }
+
+    span.counter.active{
+        color: white;
+        background-color: var(--blue);
+    }
+
+    span.counter.done{
+        color: rgb(0, 182, 0);
+        background-color: transparent;
+        border-color: rgb(0, 182, 0);
+    }
+
+    span.counter.error{
+        color: var(--red);
+        background-color: transparent;
+        border-color: var(--red);
+    }
+
+    span.counter.loading{
+        display: grid;
+        align-items: center;
+    }
+
+    span.next-process{
+        width: 100%;
+        height: 2.5px;
+        border: 1px solid var(--blue);
+    }
+
+    span.next-process.done{
+        background-color: rgb(0, 182, 0);
+        border-color: rgb(0, 182, 0);
+    }
+
+    span.next-process.error{
+        background-color: var(--red);
+        border-color: var(--red);
+    }
+
+    .form-input{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px;
+        margin: 20px 0px;
+    }
+
+    .form-input label,
+    .form-input input {
+        outline: none;
+    }
+
+    .form-input input{
+        padding-left: 10px;
+        color: blue;
+    }
+
+    .input-container {
+        border-bottom: 1px solid rgb(174, 174, 174);
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        width: 100%;
+    }
+
+    form i.input-icon, .form-input label{
+        color: rgb(31, 28, 45);
+    }
+
+    .form-btn button{
+        display: block;
+        padding: 5px 10px;
+        border-radius: 3px;
+        background-color: var(--blue);
+        color: white;
+        font-weight: bold;
+        min-width: 100px;
+        margin: 10px auto;
+    }
+
+    input::placeholder{
+        font-size: small;
+        color: rgb(164, 164, 164);
+    }
+
+    .success-section{
+        text-align: center;
+    }
+    .success-section img{
+        max-height: 50vh;
+    }
+</style>
   <%- include('footer') %>
 </body>
 
-  <style>
-    #body {
-      margin-top: 100px;
-    }
-
-    .input-card {
-      margin: 10px;
-    }
-
-    .input-card input {
-      border: 1px solid gray;
-    }
-
-    .step{
-      display: none;
-    }
-
-    .step-title{
-      text-align: center;
-    }
-
-    .step.active{
-      display: block;
-      width: fit-content;
-      margin: 40px auto;
-    }
-
-    .step-progress{
-      display: grid;
-      grid-template-columns: repeat(7, auto);
-      width: fit-content;
-      margin: 10px auto;
-      align-items: center;
-    }
-
-    .progress-at{
-      font-size: 25px;
-      border-radius: 30px;
-      height: 40px;
-      width: 40px;
-      text-align: center;
-      border: 1px solid gray;
-      color: gray;
-      display: flex;
-      align-items: stretch;
-      align-content: space-around;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .progress-at.active{
-      border-color: var(--blue);
-      color: var(--blue);
-    }
-
-    .progress-at.passed{
-      color: white;
-      background-color: var(--blue);
-      border-color: var(--blue);
-    }
-
-    .progress-dash {
-      width: 40px;
-      height: 3px;
-      background-color: gray;
-    }
-
-    .progress-dash.passed{
-      background-color: var(--blue);
-    }
-
-    form button{
-      border: 1px solid var(--blue);
-      margin-top: 20px;
-      background-color: var(--blue);
-      color: white;
-    }
-
-    form button:disabled{
-      color: gray;
-      border-color: rgb(188, 188, 188);
-    }
-  </style>
+  
 
 </html>

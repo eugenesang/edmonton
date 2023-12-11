@@ -11,6 +11,7 @@
   "author": "Eugene Sang",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
