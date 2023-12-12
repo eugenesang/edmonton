@@ -37,4 +37,8 @@ router.post('/appointment', (req, res) => {
     });
 });
 
+router.post('/', (req, res)=>{
+    res.redirect('/home-valuation');
+})
+
 module.exports = router;
