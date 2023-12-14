@@ -55,26 +55,22 @@
                             <h3 class="h-h3 el">Any Condition Guaranteed</h3>
                             <h3 class="h-h3 el">Any Price Guaranteed</h3>
                         </div>
-                        <div class="h-txt-container">
-                            <p>Get free NO OBLIGATION home valuation</p>
-                            <form class="guide-search-bar header-form" action="/home-valuation" method="post">
-                                <div class="input-container">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    <input type="text" name="address" id="search-input" placeholder="Enter your address"
-                                        required="" autocomplete="off">
-                                </div>
-                                <button class="guide-search-btn">
-                                    Instant Valuation
-                                </button>
-                            </form>
+                        <div id="h-txt-container" style="position: relative;">
+                            <div class="h-txt-container" id="h-txt">
+                                <p>Get free NO OBLIGATION home valuation</p>
+                                <%- include('home-valuation-form') %>
+                            </div>
                         </div>
-                        <div class="header-left-info">
+                        <div class="header-left-info" id="header-left-info">
                             <p>
-                                <a href="/home-valuation" class="learn-more-link">The only TRIPLE GUARANTEED brokerage in Alberta →</a>
+                                <a href="/home-valuation" class="">The only TRIPLE GUARANTEED brokerage in Alberta →</a>
                             </p>
                         </div>
                     </div>
                 </div>
+                <script>
+                    document.getElementById('h-txt-container').style.marginTop = 100 + document.getElementById('h-txt').clientHeight + 'px'
+                </script>
                 <div class="header-right">
                     <div class="header-right-image">
                         <img src="/images/black-businessman-happy-expression.png" alt="" style="float: left;">

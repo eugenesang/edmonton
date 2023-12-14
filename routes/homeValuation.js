@@ -38,7 +38,8 @@ router.post('/appointment', (req, res) => {
 });
 
 router.post('/', (req, res)=>{
-    res.redirect('/home-valuation');
+    const {searchInput} = req.body;
+    res.redirect(`/home-valuation?address=${searchInput}`);
 })
 
 module.exports = router;

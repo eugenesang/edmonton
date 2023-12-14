@@ -1,0 +1,84 @@
+<form class="guide-search-bar header-form" action="/home-valuation" method="post">
+    <div class="input-container">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" name="searchInput" id="searchInput" placeholder="Enter your address" required=""
+            autocomplete="off">
+        <ul id="suggestionsList">
+            <li>No suggestions found</li>
+        </ul>
+    </div>
+
+    <button class="guide-search-btn">
+        Instant Valuation
+    </button>
+</form>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"
+    integrity="sha512-zoJXRvW2gC8Z0Xo3lBbao5+AS3g6YWr5ztKqaicua11xHo+AvE1b0lT9ODgrHTmNUxeCw0Ry4BGRYZfXu70weg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    const socket = io('https://search.allforeclosures.ca/');
+
+    const searchForm = document.querySelector('.guide-search-bar');
+    const searchInput = document.getElementById('searchInput');
+    const suggestionsList = document.getElementById('suggestionsList');
+
+    let blurTimer;
+
+    searchInput.addEventListener('blur', () => {
+        // Introduce a delay before hiding the suggestions list
+        blurTimer = setTimeout(() => {
+            suggestionsList.classList.remove('visible');
+        }, 200);
+    });
+
+    searchInput.addEventListener('focus', () => {
+        clearTimeout(blurTimer); // Clear the blur timer if input is focused again
+        suggestionsList.classList.add('visible');
+    });
+
+
+    
+
+    searchInput.addEventListener('keyup', () => {
+        const address = searchInput.value.trim();
+        console.log(address);
+        socket.emit('search', { address })
+    })
+
+    // Listen for 'suggestions' events from the server
+    socket.on('suggestions', (suggestions) => {
+        // Update the UI with the received suggestions
+        displaySuggestions(suggestions);
+    });
+
+    // Helper function to display suggestions in the UI
+    function displaySuggestions(suggestions) {
+        suggestionsList.classList.add('visible');
+        suggestionsList.innerHTML = '';
+
+        if (suggestions.length === 0) {
+            suggestionsList.innerHTML = '<li>No suggestions found</li>';
+        } else {
+            suggestions.forEach((suggestion) => {
+                const listItem = document.createElement('li');
+
+                const str = (suggestion.toLowerCase() + ', Edmonton, AB').split(' ').map(s=>{
+                        return s.charAt(0).toUpperCase() + s.slice(1);
+                    }).join(' ');
+
+                listItem.textContent = str;
+
+                listItem.onclick = () => {
+                    searchInput.value = str; // Set the input value to the original suggestion
+                    suggestionsList.classList.remove('visible'); // Hide the suggestions list after a click
+                }
+
+                suggestionsList.appendChild(listItem);
+            });
+        }
+    }
+</script>
