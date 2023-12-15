@@ -66,3 +66,8 @@ By default, the application will be accessible at http://localhost:2354
 
 ## License
 This project is licensed under the MIT License.
+
+## Future versions
+- Future version will use MongoDB in place of mysql
+- We are shipping our code to use `react` for frontend
+- In other words we are migrating to `MERN`
