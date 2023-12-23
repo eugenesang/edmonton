@@ -15,6 +15,8 @@ Before you begin, ensure you have met the following requirements:
         ```bash 
         npm --version
         ```
+    - Since we will deploy our app in a server that has node v14, we will be using nodejs v14 for this project
+    
 - [XAMPP](https://www.apachefriends.org/) with MySQL
 
 ## Installation
