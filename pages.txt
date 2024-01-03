@@ -16,10 +16,12 @@ apply to be an agent
 create an account
 login to your account
 log out of your account
+property search (live)
+
 
 ** In need of your attention **
 agent - what to include to an agent if any
 videos - we need videos on youtube
 reviews - we need reviews from google maps
 email service - the free email service i know is limited to 50 emails an hour
-do i include posting of houses. it is useful for search
+do I include posting of houses. it is useful for search
