@@ -38,8 +38,8 @@ app.get('/', (req, res)=>{
 app.get('/og', (req, res)=>{
     res.render('index', {user: req.session.info? req.session.info: null})
 })
-app.get('/swift-sale', (req, res)=>{
-    res.render('swift-sale', {user: req.session.info? req.session.info: null})    
+app.get('/pre-market-sale', (req, res)=>{
+    res.render('pre-market-sale', {user: req.session.info? req.session.info: null})    
 })
 app.get('/local-mls', (req, res)=>{
     res.render('local-mls', {user: req.session.info? req.session.info: null})
