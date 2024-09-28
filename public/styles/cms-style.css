@@ -41,7 +41,6 @@
   padding: 0;
   list-style-type: none;
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
   font-style: normal;
   font-size: 20px;
   box-sizing: border-box;
@@ -129,7 +128,6 @@
 .custom-hero-section h3.h-h3 {
   padding: 10px 0px;
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
   font-style: normal;
 }
 
@@ -387,7 +385,6 @@ button.guide-search-btn {
 
 .guide-search-btn span {
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
   font-style: normal;
   font-size: small;
 }
@@ -512,7 +509,6 @@ button.guide-search-btn {
   color: rgb(61, 61, 255);
   background-color: transparent;
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
   font-style: normal;
   font-size: 28px;
   font-weight: 800;
