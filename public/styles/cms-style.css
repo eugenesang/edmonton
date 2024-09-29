@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .main-logo {
   width: 159px !important;
   padding: 0px 0 !important;
@@ -16,12 +17,14 @@
     padding: 1px 0 !important;
   }
 }
+
 @media only screen and (max-width: 40.063em) {
   .main-logo {
     width: 127px !important;
     padding: 1px 0 !important;
   }
 }
+
 :root {
   --red: #C92129;
   --blue: #4b93f7;
@@ -47,8 +50,8 @@
   scroll-behavior: smooth;
 }
 
-.search-results-page .body-content *{
-    font-size: 16px;
+.search-results-page .body-content * {
+  font-size: 16px;
 }
 
 .get-started-btn {
@@ -83,6 +86,7 @@
     margin: 10px 80px;
   }
 }
+
 .header-left-container .header-left {
   display: flex;
   flex-direction: column;
@@ -125,6 +129,7 @@
     color: var(--text-color-1);
   }
 }
+
 .custom-hero-section h3.h-h3 {
   padding: 10px 0px;
   font-family: "Roboto", sans-serif;
@@ -151,16 +156,16 @@
   font-weight: 400;
 }
 
-@media (max-width: 768px){
-    .instant-valuation a{
-        max-width: 80vw;
-    }
+@media (max-width: 768px) {
+  .instant-valuation a {
+    max-width: 80vw;
+  }
 }
 
-@media (min-width: 768px){
-    .instant-valuation a{
-        max-width: 40vw;
-    }
+@media (min-width: 768px) {
+  .instant-valuation a {
+    max-width: 40vw;
+  }
 }
 
 .instant-valuation a:hover {
@@ -186,9 +191,9 @@
   width: 100%;
   max-height: 85vh;
   -o-object-position: right;
-     object-position: right;
+  object-position: right;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .h-right-txt {
@@ -219,44 +224,55 @@
   .body-wrapper.page {
     margin: 10px 0px;
   }
+
   .custom-hero-section .h1 {
     font-size: 40px;
     background: radial-gradient(rgba(255, 255, 255, 0.537254902), rgba(255, 255, 255, 0.262745098), rgba(255, 255, 255, 0));
   }
+
   .custom-hero-section h3.h-h3 {
     font-size: 22px !important;
   }
+
   .custom-hero-section {
     background-color: white;
   }
+
   .header-left-container .header-left {
     max-width: 540px;
     align-items: center;
   }
+
   .header-left-container {
     background-color: rgba(255, 255, 255, 0.2156862745);
   }
+
   .header-left-container .h1 {
     background: transparent;
   }
+
   section#guide-section {
     background-color: white;
   }
 }
+
 @media (min-width: 992px) {
   .custom-hero-section {
     display: grid;
     grid-template-columns: auto 1fr;
   }
+
   .header-left {
     max-width: 720px;
   }
 }
+
 @media (min-width: 1200px) {
   .header-left {
     max-width: 840px;
   }
 }
+
 /* custom hero section */
 /* Seach bar */
 .guide-search-bar {
@@ -415,6 +431,7 @@ button.guide-search-btn {
     gap: 20px;
   }
 }
+
 .guarantee-card {
   width: -moz-fit-content;
   width: fit-content;
@@ -431,6 +448,7 @@ button.guide-search-btn {
     padding: 10px 0px;
   }
 }
+
 .guarantee-icon {
   text-align: center;
 }
@@ -604,27 +622,32 @@ h2.about-separator {
     max-width: 30vw;
   }
 }
+
 /* Media query for screens wider than 768px */
 @media screen and (min-width: 768px) {
   .about img {
     max-width: 40vw;
     max-height: unset;
   }
+
   .about {
     display: flex;
     flex-direction: row-reverse;
     /* Reverse the order of flex items on larger screens */
   }
+
   .about-1 {
     flex-direction: row;
     /* Reset the flex-direction for larger screens */
   }
+
   .about-img {
     order: 1;
     /* Reset the order to default on larger screens */
     margin-left: 20px;
     /* Add some space between text and image */
   }
+
   .about-text {
     padding: 0.5rem;
     width: 60%;
@@ -632,6 +655,7 @@ h2.about-separator {
     align-content: center;
   }
 }
+
 /* about */
 /* deals */
 #deals .header * {
@@ -659,6 +683,7 @@ h2.about-separator {
     max-width: 70vw;
   }
 }
+
 .deal-1 {
   background-color: rgb(255, 243, 235);
 }
@@ -732,10 +757,12 @@ h2.about-separator {
     padding: 10px;
     margin: 1rem auto;
   }
+
   .deal {
     max-width: 40vw;
   }
 }
+
 /* deals */
 .footer-container * {
   font-size: small;
@@ -750,18 +777,22 @@ h1.title {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
+
 .why-us-container.fearless .why-us-page-card {
   padding: 8px;
   border-radius: 4px;
   background-color: rgb(223, 223, 223);
 }
+
 .why-us-container.fearless .why-us-page-card img {
   width: 100%;
   height: auto;
 }
+
 .why-us-container.fearless .why-us-page-card p {
   padding: 8px 0px;
 }
+
 .why-us-container.fearless .why-us-page-card p strong {
   font-size: 24px;
 }
